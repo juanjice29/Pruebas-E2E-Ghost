@@ -131,24 +131,32 @@ describe('Con mi usuario de ghost quiero crear una página y programarla para qu
         cy.wait(1000);         
         newPagePage.getSaveButton().click();
         cy.wait(1000);
-        newPagePage.getSchedule().click();
+        newPagePage.getSchedule().click({ multiple: true });
         cy.wait(1000);
-        newPagePage.getInputPublish().click();
+        newPagePage.getSchedule2().click({ multiple: true });
+        cy.wait(1000);
+        newPagePage.getClose().click();
+        cy.wait(1000);
+        newPagePage.getClose().click();
+        cy.wait(1000);
+        newPagePage.getSaveButton().click({ force: true });
+        cy.wait(1000);
+        newPagePage.getInputPublish().click({ force: true });
         cy.wait(1000);   
-        navPage.getPageFunction().click(); 
+        navPage.getPageFunction().click({ force: true }); 
     })       
     }
 )
 
 //Escenario 5
-describe('Con mi usuario de ghost quiero crear una página y asignarla a un tag', 
+describe('Con mi usuario de ghost quiero crear un post y asignarla a un tag', 
   () => {
     beforeEach("Hacer Login",()=>{
         //Given I navigate to page "http://localhost:3001/ghost/#/signin"
         cy.hacerLogin(globalVariables.password,"site","nav.gh-nav.ember-view"); 
     })
 
-    it("Hacer click en la funcionalidad para crear pagina y llenar formulario",()=>{   
+    it("Hacer click en la funcionalidad para crear post y llenar formulario",()=>{   
         const navPage=new NavBarPage();
         const newPagePage= new NewPagePage();
         const pagePage=new PagePage();
@@ -173,8 +181,6 @@ describe('Con mi usuario de ghost quiero crear una página y asignarla a un tag'
         newPagePage.getClose().click();
         cy.wait(1000);         
         newPagePage.getSaveButton().click();
-        cy.wait(1000);
-        newPagePage.getSchedule().click();
         cy.wait(1000);
         newPagePage.getInputPublish().click();
         cy.wait(1000);   
@@ -222,8 +228,6 @@ describe('Con mi usuario de ghost quiero crear una página y asignarla a un tag,
         newPagePage.getClose().click();
         cy.wait(1000);         
         newPagePage.getSaveButton().click();
-        cy.wait(1000);
-        newPagePage.getSchedule().click();
         cy.wait(1000);
         newPagePage.getInputPublish().click();
         cy.wait(1000);   

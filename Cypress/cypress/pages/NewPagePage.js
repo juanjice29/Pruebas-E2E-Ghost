@@ -13,7 +13,10 @@ class NewPagePage{
         return cy.get("div.ember-view.ember-basic-dropdown-trigger.gh-btn.gh-btn-outline.gh-publishmenu-trigger");
     }
     getSchedule(){
-        return cy.get("div.gh-publishmenu-radio-button::before");
+        return cy.get("div.gh-publishmenu-radio");
+    }
+    getSchedule2(){
+        return cy.get("div.gh-date-time-picker-date");
     }
     getSettings(){
         return cy.get("button.post-settings");
