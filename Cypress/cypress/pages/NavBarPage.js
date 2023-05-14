@@ -4,6 +4,7 @@ class NavBarPage{
         return cy.get("li a[href='#/posts/']")
     }
     getPageFunction(){
+
         return cy.get("li a[href='#/pages/']")
     }
     getTagFunction(){
@@ -11,6 +12,7 @@ class NavBarPage{
     }
     getStaffFunction(){
         return cy.get("li a[href='#/staff/']")
+
     }
 }
 
