@@ -21,6 +21,7 @@ describe('Con mi usuario de ghost creo un Tag',
             const tagPage= new TagPage();
             const newTagPage= new  NewTagPage();
             cy.screenshot(`func2/esc1/e1`,{overwrite:true})
+
             //When I click on the tag function   
             navPage.getTagFunction().click();            
             //Then I should have a new tag button
