@@ -143,3 +143,128 @@ When('I change the role',async function(){
     const element=await this.driver.$(`option[value='6457302b5ab6ff0001fba499']`).setValue("No tiene sentido");    
     return element;
 })
+When('I click on the page function',async function(){
+    let element=await this.driver.$('a[href="#/pages/"]');
+    return await element.click();
+});
+Then('I should have a new page button',async function(){
+    let element=await this.driver.$("a[href='#/editor/page/']");
+    return await element;
+});
+When('I click on the page button',async function(){
+    let element=await this.driver.$('a[href="#/pages/"]');
+    return await element.click();
+});
+Then('I should have a form to enter page information',async function(){
+    let element=await this.driver.$("textarea.gh-editor-title.ember-text-area.gh-input.ember-view, article.koenig-editor.w-100.flex-grow.relative.center.mb0.mt0.ember-view");
+    return await element;
+});
+When('I enter page title',async function(){
+    let randomTitle = faker.name.jobTitle();    
+    let element=await this.driver.$("textarea.gh-editor-title.ember-text-area.gh-input.ember-view");
+    return await element.setValue(randomTitle);
+});
+When('I enter page description',async function(){
+    let randomDescription = faker.lorem.lines(1);    
+    let element=await this.driver.$("article.koenig-editor.w-100.flex-grow.relative.center.mb0.mt0.ember-view");
+    return await element.setValue(randomDescription);
+});
+When('I click publish',async function(){
+    let element=await this.driver.$("div.ember-view.ember-basic-dropdown-trigger.gh-btn.gh-btn-outline.gh-publishmenu-trigger");
+    return await element.click({ force: true });
+});
+When('I click save',async function(){
+    let element=await this.driver.$("div.ember-view.ember-basic-dropdown-trigger.gh-btn.gh-btn-outline.gh-publishmenu-trigger");
+    return await element.click({ force: true });
+});
+Then('I return to page list',async function(){
+    let element=await this.driver.$('a[href="#/pages/"]');
+    return await element.click();
+});
+When('I select scheduled publish option',async function(){
+    let element=await this.driver.$("div.gh-publishmenu-radio");
+    return await element.click({ multiple: true });
+});
+When('I click settings',async function(){
+    let element=await this.driver.$("button.post-settings");
+    return await element.click();
+});
+When('I click tags',async function(){
+    let element=await this.driver.$("#tag-input");
+    return await element.click();
+});
+When('I click a tag',async function(){
+    let element=await this.driver.$("li.ember-power-select-option");
+    return await element.click();
+});
+When('I click close',async function(){
+    let element=await this.driver.$("button.close.settings-menu-header-action");
+    return await element.click();
+});
+When('I enter Excerpt',async function(){
+    let randomExcerpt = faker.lorem.lines(1);    
+    let element=await this.driver.$("#custom-excerpt");
+    return await element.setValue(randomExcerpt);
+});
+When('I click authors',async function(){
+    let element=await this.driver.$("#author-list");
+    return await element.click();
+});
+When('I click an author',async function(){
+    let element=await this.driver.$("li.ember-power-select-option");
+    return await element.click();
+});
+When('I click on the post function',async function(){
+    let element=await this.driver.$("a[href='#/posts/']");
+    return await element.click();
+});
+Then('I should have a new post button',async function(){
+    let element=await this.driver.$("a.ember-view.gh-btn.gh-btn-green");
+    return await element;
+});
+When('I click on the post button',async function(){
+    let element=await this.driver.$("a[href='#/posts/']");
+    return await element.click();
+});
+Then('I should have a form to enter post information',async function(){
+    let element=await this.driver.$("textarea.gh-editor-title.ember-text-area.gh-input.ember-view, div.koenig-editor__editor.__mobiledoc-editor.__has-no-content");
+    return await element;
+});
+When('I enter post title',async function(){
+    let randomTitle = faker.name.jobTitle();    
+    let element=await this.driver.$("textarea.gh-editor-title.ember-text-area.gh-input.ember-view");
+    return await element.setValue(randomTitle);
+});
+When('I enter post description',async function(){
+    let randomDescription = faker.lorem.lines(1);    
+    let element=await this.driver.$("div.koenig-editor__editor.__mobiledoc-editor.__has-no-content");
+    return await element.setValue(randomDescription);
+});
+When('I click publish post',async function(){  
+    let element=await this.driver.$("div.ember-view.ember-basic-dropdown-trigger.gh-btn.gh-btn-outline.gh-publishmenu-trigger");
+    return await element.click();
+});
+When('I click save post',async function(){ 
+    let element=await this.driver.$("button.gh-btn.gh-btn-blue.gh-publishmenu-button.gh-btn-icon.ember-view");
+    return await element.click();
+});
+Then('I return to post list',async function(){
+    let element=await this.driver.$('a[href="#/posts/"]');
+    return await element.click({multiple: true});
+});
+When('I click post settings',async function(){ 
+    let element=await this.driver.$("button.post-settings");
+    return await element.click();
+});
+When('I click post tags',async function(){ 
+    let element=await this.driver.$("input.ember-power-select-trigger-multiple-input");
+    return await element.click();
+});
+When('I click post tag',async function(){ 
+    let element=await this.driver.$("li.ember-power-select-option");
+    return await element.click();
+});
+When('I click close post settings',async function(){ 
+    let element=await this.driver.$("button.close.settings-menu-header-action");
+    return await element.click();
+});

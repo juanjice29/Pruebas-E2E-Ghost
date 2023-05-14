@@ -25,7 +25,8 @@ describe('Con mi usuario de ghost quiero crear una página',
             newPagePage.getInputTitle().should("exist")
             newPagePage.getInputDescription().should("exist")
             cy.wait(1000);
-            newPagePage.getInputTitle().type(faker.name.jobTitle());
+            const title = faker.name.jobTitle();
+            newPagePage.getInputTitle().type(title);
             cy.wait(1000);
             newPagePage.getInputDescription().type(faker.lorem.lines(1));   
             cy.wait(1000);         

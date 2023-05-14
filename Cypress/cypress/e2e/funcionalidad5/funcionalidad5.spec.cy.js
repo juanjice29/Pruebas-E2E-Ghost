@@ -108,7 +108,7 @@ describe('Con mi usuario de ghost quiero crear un post sin título',
 )
 
 //Escenario 4
-describe('Con mi usuario de ghost quiero crear un post y programarlo para que se publique en una fecha específica', 
+describe('Con mi usuario de ghost quiero crear un post y asignarlo a un tag', 
   () => {
     beforeEach("Hacer Login",()=>{
         //Given I navigate to page "http://localhost:3001/ghost/#/signin"
@@ -127,7 +127,9 @@ describe('Con mi usuario de ghost quiero crear un post y programarlo para que se
         postPage.getTitleName().should("exist")
         postPage.getInputDescription().should("exist")
         cy.wait(1000);
-        newPostPage.getTitleName().type(faker.name.jobTitle());
+        newPostPage.getTitleName
+        
+        ().type(faker.name.jobTitle());
         cy.wait(1000);
         newPostPage.getInputDescription().type(faker.lorem.lines(1));   
         cy.wait(1000);
