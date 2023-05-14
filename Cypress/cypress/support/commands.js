@@ -23,7 +23,7 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-import {globalVariables} from "../environment/credentials"
+import {globalVariables, globalVariablesv4} from "../environment/credentials"
 
 Cypress.Commands.add('hacerClickEnFuncionalidad',(url_link)=>{
     cy.get(`a[href="#/${url_link}/"]`).first().click()
@@ -46,6 +46,32 @@ Cypress.Commands.add('hacerLogin',
     cy.wait(1000);
     //And I click on submit button
     cy.get("#ember12").click();
+    //And I wait for 2 seconds
+    cy.wait(2000);
+    //Then url should end in #/site
+    cy.url().should('equal',globalVariables.baseUrl+"#/"+expectedUrl)
+    //Then navbar should exist
+    cy.get(expectedElem).should("exist")
+    cy.wait(2000);
+  
+})
+
+Cypress.Commands.add('hacerLoginV4',
+ (password,expectedUrl,expectedElem) => {
+    //Given the url
+    cy.visit(globalVariablesv4.baseUrl)
+    //And I wait for 2 seconds 
+    cy.wait(2000)
+    //And I enter login email    
+    cy.get('#ember7').type(globalVariablesv4.email)
+    //And I wait for 1 seconds
+    cy.wait(1000);
+    //And I enter the password
+    cy.get('#ember9').type(password);
+    //And I wait for 1 seconds
+    cy.wait(1000);
+    //And I click on submit button
+    cy.get("#ember11").click();
     //And I wait for 2 seconds
     cy.wait(2000);
     //Then url should end in #/site

@@ -1,8 +1,8 @@
 import {globalVariables} from "../../environment/credentials"
 import { faker } from '@faker-js/faker';
-import {NavBarPage} from '../../pages/NavBarPage';
-import {TagPage} from '../../pages/TagPage';
-import {NewTagPage} from '../../pages/NewTagPAge';
+import NavBarPage from '../../pages/NavBarPage';
+import TagPage from '../../pages/TagPage';
+import NewTagPage from '../../pages/NewTagPAge';
 
  //Funcionalidad Crear un Tag
 //Escenario 1
@@ -17,9 +17,9 @@ describe('Con mi usuario de ghost creo un Tag',
         })
         let current_slug=""
         it("Hacer click en la funcionalidad para crear tag y llenar formulario",()=>{   
-            const navPage=NavBarPage();
-            const tagPage=TagPage();
-            const newTagPage=NewTagPage();
+            const navPage= new NavBarPage();
+            const tagPage=new TagPage();
+            const newTagPage=new NewTagPage();
             //When I click on the tag function   
             navPage.getTagFunction().click();            
             //Then I should have a new tag button

@@ -39,5 +39,20 @@ class NewPagePage{
     getAuthor(){
         return cy.get("li.ember-power-select-option");
     }
+    getCloseV4(){
+        return cy.get("button.settings-menu-toggle.gh-btn.gh-btn-editor.gh-btn-icon.icon-only.gh-btn-action-icon")
+    }
+    getPublishV4(){
+        return cy.get("div.gh-publishmenu.ember-view")
+    }
+    getSaveV4(){
+        return cy.get("button.gh-btn.gh-btn-black.gh-publishmenu-button.gh-btn-icon.ember-view")
+    }
+    getSettingsV4(){
+        return cy.get("button.settings-menu-toggle.gh-btn.gh-btn-editor.gh-btn-icon.icon-only.gh-btn-action-icon")
+    }
+    getCloseAuthor(){
+        return cy.get("li.ember-power-select-option.ember-power-select-option--search-message")
+    }
 }
 export default NewPagePage
