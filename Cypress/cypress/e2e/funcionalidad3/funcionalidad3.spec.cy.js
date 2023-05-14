@@ -16,26 +16,28 @@ describe('Con mi usuario de ghost quiero enviar una invitacion a un email',
             const navPage= new NavBarPage();
             const staffPage= new StaffPage();
             
-            navPage.getStaffFunction().click();  
-            cy.screenshot(`func3/esc1/e1`,{overwrite:true})
+            navPage.getStaffFunction().click();              
             cy.wait(1000);
+            cy.screenshot(`func3/v-3.41.1/esc1/e1`,{overwrite:true}) 
             //Then A save button should exist
             staffPage.getInvitePeople().should("exist")
             cy.wait(1000);
             //And I click on add new tag
             staffPage.getInvitePeople().click()            
             cy.wait(1000);
-            cy.screenshot(`func3/esc1/e2`,{overwrite:true})
+            cy.screenshot(`func3/v-3.41.1/esc1/e2`,{overwrite:true}) 
             //Then A form should esxist
             staffPage.getInviteForm().should("exist");
             cy.wait(1000);
+            cy.screenshot(`func3/v-3.41.1/esc1/e3`,{overwrite:true}) 
             //And I enter an email
             staffPage.getEmailInput().type(faker.internet.email());
             cy.wait(1000);
+            cy.screenshot(`func3/v-3.41.1/esc1/e4`,{overwrite:true}) 
             //And I save the invitation
             staffPage.getSendInvitation().click();
             cy.wait(1000);
-            cy.screenshot(`func3/esc1/e3`,{overwrite:true})
+            cy.screenshot(`func3/v-3.41.1/esc1/e5`,{overwrite:true}) 
             //Then An Error must exist
             staffPage.getAlertMessage().should("exist");
 
@@ -59,24 +61,26 @@ describe('Con mi usuario de ghost quiero enviar una invitacion a un email con em
 
             navPage.getStaffFunction().click();  
             cy.wait(1000);
-            cy.screenshot(`func3/esc2/e1`,{overwrite:true})
+            cy.screenshot(`func3/v-3.41.1/esc2/e1`,{overwrite:true}) 
             //Then A save button should exist
             staffPage.getInvitePeople().should("exist")
             cy.wait(1000);
+            cy.screenshot(`func3/v-3.41.1/esc2/e2`,{overwrite:true}) 
             //And I click on add new tag
             staffPage.getInvitePeople().click()
             cy.wait(1000);
-            cy.screenshot(`func3/esc2/e2`,{overwrite:true})
+            cy.screenshot(`func3/v-3.41.1/esc2/e3`,{overwrite:true}) 
             //Then A form should esxist
             staffPage.getInviteForm().should("exist");
             cy.wait(1000);
+            cy.screenshot(`func3/v-3.41.1/esc2/e4`,{overwrite:true}) 
             //And I enter an email
             staffPage.getEmailInput().type(faker.internet.email());
             cy.wait(1000);
             //And I save the invitation
             staffPage.getSendInvitation().click();
             cy.wait(1000);
-            cy.screenshot(`func3/esc2/e3`,{overwrite:true})
+            cy.screenshot(`func3/v-3.41.1/esc2/e5`,{overwrite:true}) 
             //Then An Error must exist
             staffPage.getAlertInvalidUser().should("exist");
 
@@ -100,33 +104,36 @@ describe('Con mi usuario de ghost quiero enviar una invitacion a un email ya exi
 
             navPage.getStaffFunction().click();  
             cy.wait(1000);
-            cy.screenshot(`func3/esc3/e1`,{overwrite:true})
+            cy.screenshot(`func3/v-3.41.1/esc3/e1`,{overwrite:true}) 
             //Then A save button should exist
             staffPage.getInvitePeople().should("exist")
             cy.wait(1000);
             //And I click on add new tag
             staffPage.getInvitePeople().click()
             cy.wait(1000);
-            cy.screenshot(`func3/esc3/e2`,{overwrite:true})
+            cy.screenshot(`func3/v-3.41.1/esc3/e2`,{overwrite:true}) 
             //Then A form should esxist
             staffPage.getInviteForm().should("exist");
-            cy.wait(1000);            
+            cy.wait(1000);  
+            cy.screenshot(`func3/v-3.41.1/esc3/e3`,{overwrite:true})           
             let existing_email=faker.internet.email();            
             staffPage.getEmailInput().type(existing_email);
             cy.wait(1000);
+            cy.screenshot(`func3/v-3.41.1/esc3/e4`,{overwrite:true}) 
             //And I save the invitation
             staffPage.getSendInvitation().click();
             cy.wait(1000);
-            cy.screenshot(`func3/esc3/e3`,{overwrite:true})
+            cy.screenshot(`func3/v-3.41.1/esc3/e5`,{overwrite:true}) 
             //Then An Error must exist
             staffPage.getAlertInvalidUser().should("exist");
             navPage.getStaffFunction().click();  
             cy.wait(1000);
+            cy.screenshot(`func3/v-3.41.1/esc3/e6`,{overwrite:true}) 
             staffPage.getInvitePeople().click()
             staffPage.getEmailInput().first().type(existing_email);           
             staffPage.getSendInvitation().click();
             cy.wait(3000);
-            cy.screenshot(`func3/esc3/e4`,{overwrite:true})
+            cy.screenshot(`func3/v-3.41.1/esc3/e7`,{overwrite:true}) 
             staffPage.getAlertMessageAlready().should("exist");
 
 
@@ -150,27 +157,31 @@ describe('Con mi usuario de ghost quiero enviar una invitacion a un email con un
 
             navPage.getStaffFunction().click();  
             cy.wait(1000);
-            cy.screenshot(`func3/esc4/e1`,{overwrite:true})
+            cy.screenshot(`func3/v-3.41.1/esc4/e1`,{overwrite:true})             
             //Then A save button should exist
             staffPage.getInvitePeople().should("exist")
             cy.wait(1000);
+            cy.screenshot(`func3/v-3.41.1/esc4/e2`,{overwrite:true})  
             //And I click on add new tag
             staffPage.getInvitePeople().click()
             cy.wait(1000);
-            cy.screenshot(`func3/esc4/e2`,{overwrite:true})
+            cy.screenshot(`func3/v-3.41.1/esc4/e3`,{overwrite:true})  
             //Then A form should esxist
             staffPage.getInviteForm().should("exist");
             cy.wait(1000);
+            cy.screenshot(`func3/v-3.41.1/esc4/e4`,{overwrite:true})  
             //And I enter an email
             staffPage.getEmailInput().type(faker.internet.email());
             cy.wait(1000);
             staffPage.getRoleSelect().select('6457302b5ab6ff0001fba497');
             //And I save the invitation
             cy.wait(1000);
-            cy.screenshot(`func3/esc4/e3`,{overwrite:true})
+            cy.screenshot(`func3/v-3.41.1/esc4/e5`,{overwrite:true})  
             staffPage.getSendInvitation().click();
+            cy.wait(1000);
+            cy.screenshot(`func3/v-3.41.1/esc4/e6`,{overwrite:true}) 
             staffPage.getAlertMessage().should("exist");
-            cy.screenshot(`func3/esc4/e4`,{overwrite:true})
+             
         })
 
 })
