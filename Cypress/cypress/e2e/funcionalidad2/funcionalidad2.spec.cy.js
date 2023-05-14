@@ -20,10 +20,12 @@ describe('Con mi usuario de ghost creo un Tag',
             const navPage= new NavBarPage();
             const tagPage= new TagPage();
             const newTagPage= new  NewTagPage();
+            cy.screenshot(`func2/esc1/e1`,{overwrite:true})
             //When I click on the tag function   
             navPage.getTagFunction().click();            
             //Then I should have a new tag button
-            navPage.getTagFunction().should("exist");            
+            navPage.getTagFunction().should("exist");    
+            cy.screenshot(`func2/esc1/e2`,{overwrite:true})        
             cy.wait(1000);
             //And I click on the new tag button
             tagPage.getNewTagButton().click()
@@ -32,6 +34,7 @@ describe('Con mi usuario de ghost creo un Tag',
             newTagPage.getInputName().should("exist")
             newTagPage.getInputSlug().should("exist")
             newTagPage.getInputDescription().should("exist")
+            cy.screenshot(`func2/esc1/e3`,{overwrite:true})
             cy.wait(1000);
             newTagPage.getInputName().type(faker.name.fullName());
             cy.wait(1000);
@@ -43,14 +46,17 @@ describe('Con mi usuario de ghost creo un Tag',
             cy.wait(1000);
             //And I enter tag description
             newTagPage.getInputDescription().type(faker.lorem.lines(1));   
+            cy.screenshot(`func2/esc1/e4`,{overwrite:true})
             cy.wait(1000);         
             //And I click Save
             newTagPage.getSaveButton().click();
-            cy.wait(2000);   
+            cy.screenshot(`func2/esc1/e5`,{overwrite:true})
+            cy.wait(2000);
             //And I click on the tag function
             navPage.getTagFunction().click(); 
             //Then I should have a new tag with correct slug link
-            tagPage.getTagBySlug(current_slug).should("exist");            
+            tagPage.getTagBySlug(current_slug).should("exist"); 
+            cy.screenshot(`func2/esc1/e6`,{overwrite:true})           
         })       
     }  
 )
@@ -68,9 +74,11 @@ describe('Con mi usuario de ghost creo un Tag sin titulo y luego lo corrijo',
             const tagPage= new TagPage();
             const newTagPage= new  NewTagPage();
             //When I click on the tag function   
+            cy.screenshot(`func2/esc2/e1`,{overwrite:true})
             navPage.getTagFunction().click();            
             //Then I should have a new tag button
-            navPage.getTagFunction().should("exist");            
+            navPage.getTagFunction().should("exist"); 
+            cy.screenshot(`func2/esc2/e2`,{overwrite:true})           
             cy.wait(1000);
             //And I click on the new tag button
             tagPage.getNewTagButton().click();
@@ -79,6 +87,7 @@ describe('Con mi usuario de ghost creo un Tag sin titulo y luego lo corrijo',
             newTagPage.getInputName().should("exist")
             newTagPage.getInputSlug().should("exist")
             newTagPage.getInputDescription().should("exist")
+            cy.screenshot(`func2/esc2/e3`,{overwrite:true})
             cy.wait(1000);
             newTagPage.typeEmptyName();
             cy.wait(1000);
@@ -89,17 +98,21 @@ describe('Con mi usuario de ghost creo un Tag sin titulo y luego lo corrijo',
             newTagPage.getInputSlug().type(current_slug,{force: true});
             cy.wait(1000);
             //And I enter tag description
-            newTagPage.getInputDescription().type(faker.lorem.lines(1));   
+            newTagPage.getInputDescription().type(faker.lorem.lines(1));  
+            cy.screenshot(`func2/esc2/e4`,{overwrite:true}) 
             cy.wait(1000);         
             //And I click Save
             newTagPage.getSaveButton().click();
+            cy.screenshot(`func2/esc2/e5`,{overwrite:true})
             cy.wait(2000);   
             //And I click on the tag function
             navPage.getTagFunction().click(); 
             //Then I should have a new tag with correct slug link
             tagPage.getTagBySlug(current_slug).should("exist");
+            cy.screenshot(`func2/esc2/e6`,{overwrite:true})
 
             newTagPage.getErrorModal().first().click();    
+            cy.screenshot(`func2/esc2/e7`,{overwrite:true})
             //And I click on the leave button            
             cy.wait(1000);
             //Then I should have a new tag with correct slug link
@@ -125,9 +138,11 @@ describe('Con mi usuario de ghost creo un Tag con un nombre que ya exista',
             const tagPage= new TagPage();
             const newTagPage= new  NewTagPage();
             //When I click on the tag function   
+            cy.screenshot(`func2/esc3/e1`,{overwrite:true})
             navPage.getTagFunction().click();            
             //Then I should have a new tag button
-            navPage.getTagFunction().should("exist");            
+            navPage.getTagFunction().should("exist");   
+            cy.screenshot(`func2/esc3/e2`,{overwrite:true})         
             cy.wait(1000);
             //And I click on the new tag button
             tagPage.getNewTagButton().click()
@@ -136,6 +151,7 @@ describe('Con mi usuario de ghost creo un Tag con un nombre que ya exista',
             newTagPage.getInputName().should("exist")
             newTagPage.getInputSlug().should("exist")
             newTagPage.getInputDescription().should("exist")
+            cy.screenshot(`func2/esc3/e3`,{overwrite:true})
             cy.wait(1000);
             let current_name=faker.name.fullName();
             newTagPage.getInputName().type(current_name);
@@ -148,14 +164,17 @@ describe('Con mi usuario de ghost creo un Tag con un nombre que ya exista',
             cy.wait(1000);
             //And I enter tag description
             newTagPage.getInputDescription().type(faker.lorem.lines(1));   
+            cy.screenshot(`func2/esc3/e4`,{overwrite:true})
             cy.wait(1000);         
             //And I click Save
             newTagPage.getSaveButton().click();
+            cy.screenshot(`func2/esc3/e5`,{overwrite:true})
             cy.wait(2000);   
             //And I click on the tag function
             navPage.getTagFunction().click(); 
             //Then I should have a new tag with correct slug link
             cy.wait(1000);
+            cy.screenshot(`func2/esc3/e6`,{overwrite:true})
             tagPage.getNewTagButton().click()
             cy.wait(1000);
              
@@ -163,6 +182,7 @@ describe('Con mi usuario de ghost creo un Tag con un nombre que ya exista',
             newTagPage.getInputName().should("exist")
             newTagPage.getInputSlug().should("exist")
             newTagPage.getInputDescription().should("exist")
+            cy.screenshot(`func2/esc3/e7`,{overwrite:true})
 
             cy.wait(1000);
 
@@ -179,7 +199,8 @@ describe('Con mi usuario de ghost creo un Tag con un nombre que ya exista',
             newTagPage.getInputSlug().type(current_slug2,{force: true});
             cy.wait(1000);
             //And I enter tag description
-            newTagPage.getInputDescription().type(faker.lorem.lines(1));   
+            newTagPage.getInputDescription().type(faker.lorem.lines(1));  
+            cy.screenshot(`func2/esc3/e8`,{overwrite:true}) 
             cy.wait(1000);         
             //And I click Save
             newTagPage.getSaveButton().click();
@@ -189,6 +210,7 @@ describe('Con mi usuario de ghost creo un Tag con un nombre que ya exista',
             //Then I should have a new tag with correct slug link
             tagPage.getTagBySlug(current_slug2).should("exist");
             tagPage.getTagBySlug(current_slug).should("exist");
+            cy.screenshot(`func2/esc3/e9`,{overwrite:true})
             cy.wait(1000); 
         })       
     }  

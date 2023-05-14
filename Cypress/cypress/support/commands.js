@@ -31,13 +31,13 @@ Cypress.Commands.add('hacerClickEnFuncionalidad',(url_link)=>{
 })
 
 Cypress.Commands.add('hacerLogin',
- (password,expectedUrl,expectedElem) => {
+ (password,expectedUrl,expectedElem,esc=false) => {
     //Given the url
     cy.visit(globalVariables.baseUrl)
     //And I wait for 2 seconds 
     cy.wait(2000)
     //And I enter login email    
-    cy.get('#ember8').type(globalVariables.email)
+    cy.get('#ember8').type(globalVariables.email)    
     //And I wait for 1 seconds
     cy.wait(1000);
     //And I enter the password
@@ -45,6 +45,7 @@ Cypress.Commands.add('hacerLogin',
     //And I wait for 1 seconds
     cy.wait(1000);
     //And I click on submit button
+    if(esc) cy.screenshot(`func1/${esc}/e1`,{overwrite:true});
     cy.get("#ember12").click();
     //And I wait for 2 seconds
     cy.wait(2000);
@@ -52,6 +53,7 @@ Cypress.Commands.add('hacerLogin',
     cy.url().should('equal',globalVariables.baseUrl+"#/"+expectedUrl)
     //Then navbar should exist
     cy.get(expectedElem).should("exist")
+    if(esc) cy.screenshot(`func1/${esc}/e2`,{overwrite:true});
     cy.wait(2000);
   
 })
