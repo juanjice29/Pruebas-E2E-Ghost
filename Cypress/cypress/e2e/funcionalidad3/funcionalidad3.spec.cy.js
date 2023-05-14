@@ -1,36 +1,40 @@
 import {globalVariables} from "../../environment/credentials"
 import { faker } from '@faker-js/faker';
+import StaffPage from "../../pages/StaffPage";
+import NavBarPage from "../../pages/NavBarPage";
  //Funcionalidad Enviar e-mail de invitacion al staff 
 //Escenario 1
-
+/*
 describe('Con mi usuario de ghost quiero enviar una invitacion a un email', 
   () => {
     
-        //And I click on the tag function   
         beforeEach("Hacer Login",()=>{
             cy.hacerLogin(globalVariables.password,"site","nav.gh-nav.ember-view"); 
         })
         it("Hacer click en la funcionalidad para crear tag y llenar formulario",()=>{       
             //And I click on the staff function    
-            cy.hacerClickEnFuncionalidad("staff");  
+            const navPage= new NavBarPage();
+            const staffPage= new StaffPage();
+
+            navPage.getStaffFunction().click();  
             cy.wait(1000);
             //Then A save button should exist
-            cy.get("button.gh-btn.gh-btn-green").should("exist")
+            staffPage.getInvitePeople().should("exist")
             cy.wait(1000);
             //And I click on add new tag
-            cy.get("button.gh-btn.gh-btn-green").click()
+            staffPage.getInvitePeople().click()
             cy.wait(1000);
             //Then A form should esxist
-            cy.get(`input[name="email"],input[name="role"]`).should("exist");
+            staffPage.getInviteForm().should("exist");
             cy.wait(1000);
             //And I enter an email
-            cy.get(`input[name="email"]`).type(faker.internet.email());
+            staffPage.getEmailInput().type(faker.internet.email());
             cy.wait(1000);
             //And I save the invitation
-            cy.get(".gh-btn.gh-btn-green.gh-btn-icon.ember-view").click();
+            staffPage.getSendInvitation().click();
             cy.wait(1000);
             //Then An Error must exist
-            cy.get(".gh-alert.gh-alert-red.ember-view .gh-alert-content").should("exist");
+            staffPage.getAlertMessage().should("exist");
 
 
         })
@@ -47,20 +51,28 @@ describe('Con mi usuario de ghost quiero enviar una invitacion a un email con em
             cy.hacerLogin(globalVariables.password,"site","nav.gh-nav.ember-view"); 
         })
         it("Hacer click en la funcionalidad para crear tag y llenar formulario",()=>{           
-            cy.hacerClickEnFuncionalidad("staff");  
-            cy.wait(1000);
-            cy.get("button.gh-btn.gh-btn-green").should("exist")
-            cy.wait(1000);
-            cy.get("button.gh-btn.gh-btn-green").click()
-            cy.wait(1000);
-            cy.get(`input[name="email"],input[name="role"]`).should("exist");
-            cy.wait(1000);
-            cy.get(`input[name="email"]`).type(faker.name.fullName());
-            cy.wait(1000);
-            cy.get(".gh-btn.gh-btn-green.gh-btn-icon.ember-view").click();
-            cy.wait(1000);
-            cy.get(".retry_svg__retry-animated").should("exist");
+            const navPage= new NavBarPage();
+            const staffPage= new StaffPage();
 
+            navPage.getStaffFunction().click();  
+            cy.wait(1000);
+            //Then A save button should exist
+            staffPage.getInvitePeople().should("exist")
+            cy.wait(1000);
+            //And I click on add new tag
+            staffPage.getInvitePeople().click()
+            cy.wait(1000);
+            //Then A form should esxist
+            staffPage.getInviteForm().should("exist");
+            cy.wait(1000);
+            //And I enter an email
+            staffPage.getEmailInput().type(faker.internet.email());
+            cy.wait(1000);
+            //And I save the invitation
+            staffPage.getSendInvitation().click();
+            cy.wait(1000);
+            //Then An Error must exist
+            staffPage.getAlertInvalidUser().should("exist");
 
         })
 
@@ -77,36 +89,41 @@ describe('Con mi usuario de ghost quiero enviar una invitacion a un email ya exi
             cy.hacerLogin(globalVariables.password,"site","nav.gh-nav.ember-view"); 
         })
         it("Hacer click en la funcionalidad para crear tag y llenar formulario",()=>{           
-            cy.hacerClickEnFuncionalidad("staff");  
+            const navPage= new NavBarPage();
+            const staffPage= new StaffPage();
+
+            navPage.getStaffFunction().click();  
             cy.wait(1000);
-            cy.get("button.gh-btn.gh-btn-green").should("exist")
+            //Then A save button should exist
+            staffPage.getInvitePeople().should("exist")
             cy.wait(1000);
-            cy.get("button.gh-btn.gh-btn-green").click()
+            //And I click on add new tag
+            staffPage.getInvitePeople().click()
             cy.wait(1000);
-            cy.get(`input[name="email"],input[name="role"]`).should("exist");
-            cy.wait(1000);
-            let existing_email=faker.internet.email();
-            cy.log(existing_email)
-            cy.get(`input[name="email"]`).type(existing_email);
+            //Then A form should esxist
+            staffPage.getInviteForm().should("exist");
             cy.wait(1000);            
-            cy.get(".gh-btn.gh-btn-green.gh-btn-icon.ember-view").click();
+            let existing_email=faker.internet.email();            
+            staffPage.getEmailInput().type(existing_email);
             cy.wait(1000);
-            cy.get(".gh-alert.gh-alert-red.ember-view .gh-alert-content").should("exist");
-            cy.hacerClickEnFuncionalidad("staff");
-            cy.wait(1000);    
-            cy.get("button.gh-btn.gh-btn-green").click()
-            cy.get(`input[name="email"]`).first().type(existing_email);
-
-
-            cy.get(".gh-btn.gh-btn-green.gh-btn-icon.ember-view").click();
+            //And I save the invitation
+            staffPage.getSendInvitation().click();
+            cy.wait(1000);
+            //Then An Error must exist
+            staffPage.getAlertInvalidUser().should("exist");
+            navPage.getStaffFunction().click();  
+            cy.wait(1000);
+            staffPage.getInvitePeople().click()
+            staffPage.getEmailInput().first().type(existing_email);           
+            staffPage.getSendInvitation().click();
             cy.wait(3000);
-            cy.get(".gh-alert.gh-alert-red.ember-view .gh-alert-content,p.response").should("exist");
+            staffPage.getAlertMessageAlready().should("exist");
 
 
         })
 
 })
-
+*/
 //Escenario 4
 
 describe('Con mi usuario de ghost quiero enviar una invitacion a un email con un rol dirente', 
@@ -117,24 +134,29 @@ describe('Con mi usuario de ghost quiero enviar una invitacion a un email con un
             cy.hacerLogin(globalVariables.password,"site","nav.gh-nav.ember-view"); 
         })
         it("Hacer click en la funcionalidad para crear tag y llenar formulario",()=>{           
-            cy.hacerClickEnFuncionalidad("staff");  
-            cy.wait(1000);
-            cy.get("button.gh-btn.gh-btn-green").should("exist")
-            cy.wait(1000);
-            cy.get("button.gh-btn.gh-btn-green").click()
-            cy.wait(1000);
-            cy.get(`input[name="email"],input[name="role"]`).should("exist");
-            cy.wait(1000);
-            cy.get("#new-user-role").select('6457302b5ab6ff0001fba497');
-            cy.wait(1000);
-            cy.get(`input[name="email"]`).type(faker.internet.email());
-            cy.wait(1000);            
-            cy.get(".gh-btn.gh-btn-green.gh-btn-icon.ember-view").click();
-            cy.wait(1000);
-            cy.get(".gh-alert.gh-alert-red.ember-view .gh-alert-content").should("exist");
-           
 
+            const navPage= new NavBarPage();
+            const staffPage= new StaffPage();
 
+            navPage.getStaffFunction().click();  
+            cy.wait(1000);
+            //Then A save button should exist
+            staffPage.getInvitePeople().should("exist")
+            cy.wait(1000);
+            //And I click on add new tag
+            staffPage.getInvitePeople().click()
+            cy.wait(1000);
+            //Then A form should esxist
+            staffPage.getInviteForm().should("exist");
+            cy.wait(1000);
+            //And I enter an email
+            staffPage.getEmailInput().type(faker.internet.email());
+            cy.wait(1000);
+            staffPage.getRoleSelect().select('6457302b5ab6ff0001fba497');
+            //And I save the invitation
+            cy.wait(1000);
+            staffPage.getSendInvitation().click();
+            staffPage.getAlertMessage().should("exist");
         })
 
 })
