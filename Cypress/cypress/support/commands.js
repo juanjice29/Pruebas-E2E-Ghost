@@ -33,53 +33,70 @@ Cypress.Commands.add('hacerClickEnFuncionalidad',(url_link)=>{
 Cypress.Commands.add('hacerLogin',
  (password,expectedUrl,expectedElem,esc=false) => {
     //Given the url
-    cy.visit(globalVariables.baseUrl)
+    cy.visit(globalVariables.baseUrl);       
     //And I wait for 2 seconds 
     cy.wait(2000)
+    if(esc) cy.screenshot(`func1/v-4/${esc}/e1`,{overwrite:true});
     //And I enter login email    
-    cy.get('#ember8').type(globalVariables.email)    
+    cy.get('#ember8').type(globalVariables.email);
+    if(esc) cy.screenshot(`func1/v-4/${esc}/e2`,{overwrite:true});
     //And I wait for 1 seconds
     cy.wait(1000);
     //And I enter the password
     cy.get('#ember10').type(password);
+    if(esc) cy.screenshot(`func1/v-4/${esc}/e3`,{overwrite:true});
     //And I wait for 1 seconds
     cy.wait(1000);
     //And I click on submit button
-    if(esc) cy.screenshot(`func1/${esc}/e1`,{overwrite:true});
-    cy.get("#ember12").click();
+    if(esc){
+        cy.get("#ember12").click().screenshot(`func1/v-4/${esc}/e4`,{overwrite:true});;
+    }else{
+        cy.get("#ember12").click();
+    }
+    
     //And I wait for 2 seconds
     cy.wait(2000);
+    if(esc) cy.screenshot(`func1/v-4/${esc}/e5`,{overwrite:true});
     //Then url should end in #/site
     cy.url().should('equal',globalVariables.baseUrl+"#/"+expectedUrl)
     //Then navbar should exist
     cy.get(expectedElem).should("exist")
-    if(esc) cy.screenshot(`func1/${esc}/e2`,{overwrite:true});
+    if(esc) cy.screenshot(`func1/v-4/${esc}/e6`,{overwrite:true});
     cy.wait(2000);
   
 })
 
 Cypress.Commands.add('hacerLoginV4',
- (password,expectedUrl,expectedElem) => {
+ (password,expectedUrl,expectedElem,esc=false) => {
     //Given the url
-    cy.visit(globalVariablesv4.baseUrl)
+    cy.visit(globalVariablesv4.baseUrl)    
     //And I wait for 2 seconds 
     cy.wait(2000)
+    if(esc) cy.screenshot(`func1/v-3.41.1/${esc}/e1`,{overwrite:true});
     //And I enter login email    
-    cy.get('#ember7').type(globalVariablesv4.email)
+    cy.get('#ember7').type(globalVariablesv4.email);
+    if(esc) cy.screenshot(`func1/v-3.41.1/${esc}/e2`,{overwrite:true});
     //And I wait for 1 seconds
     cy.wait(1000);
     //And I enter the password
     cy.get('#ember9').type(password);
+    if(esc) cy.screenshot(`func1/v-3.41.1/${esc}/e3`,{overwrite:true});
     //And I wait for 1 seconds
     cy.wait(1000);
     //And I click on submit button
-    cy.get("#ember11").click();
+    if(esc){
+        cy.get("#ember11").click().screenshot(`func1/v-3.41.1/${esc}/e4`,{overwrite:true})
+    } else{
+        cy.get("#ember11").click();
+    }    
     //And I wait for 2 seconds
     cy.wait(2000);
+    if(esc) cy.screenshot(`func1/v-3.41.1/${esc}/e5`,{overwrite:true});
     //Then url should end in #/site
-    cy.url().should('equal',globalVariables.baseUrl+"#/"+expectedUrl)
+    cy.url().should('equal',globalVariablesv4.baseUrl+"#/"+expectedUrl)
     //Then navbar should exist
     cy.get(expectedElem).should("exist")
+    if(esc) cy.screenshot(`func1/v-3.41.1/${esc}/e6`,{overwrite:true});
     cy.wait(2000);
   
 })
