@@ -25,7 +25,6 @@ Aqui hay dos opciones para abrir cypress y ejecturar las pruebas:
 </ul>
 <h2>Pasos para correr las pruebas de regresión visual:</h2>
 
-
 <h2>Funciones y escenarios</h2>
 <ul>
     <li>Hacer Login
