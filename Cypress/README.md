@@ -33,14 +33,14 @@ Aqui hay dos opciones para abrir cypress y ejecturar las pruebas:
             <li>Con mi usuario y contraseña de ghost quiero hacer login en la pagina utilizando una contraseña incorrecta.</li>
             <li>Con mi usuario y contraseña de ghost quiero hacer login en la pagina haciendo inyeccion de codigo</li>
         </ul>
-    <li>
+    </li>
      <li>Crear un Tag
         <ul>
             <li>Con mi usuario de ghost creo un Tag</li>
             <li>Con mi usuario de ghost creo un Tag sin titulo y luego lo corrijo</li>
             <li>Con mi usuario de ghost creo un Tag con un nombre que ya exista</li>
          </ul>
-    <li>
+    </li>
      <li>Enviar e-mail de invitacion al staff 
         <ul>
             <li>Con mi usuario de ghost quiero enviar una invitacion a un email</li>
@@ -48,7 +48,7 @@ Aqui hay dos opciones para abrir cypress y ejecturar las pruebas:
             <li>Con mi usuario de ghost quiero enviar una invitacion a un email ya existente en las invitaciones</li>
             <li>Con mi usuario de ghost quiero enviar una invitacion a un email con un rol dirente</li>
          </ul>
-    <li>
+    </li>
      <li>Crear una página
         <ul>
             <li>Con mi usuario de ghost quiero crear una página</li>
@@ -58,7 +58,7 @@ Aqui hay dos opciones para abrir cypress y ejecturar las pruebas:
             <li>Con mi usuario de ghost quiero crear una página y asignarla a un tag, usuario y extracto</li>
             <li>Con mi usuario de ghost quiero crear una página y programarla para que se publique en una fecha específica</li>
          </ul>
-    <li>
+    </li>
      <li>Crear un Post
         <ul>
             <li>Con mi usuario de ghost quiero crear un post</li>
@@ -66,6 +66,6 @@ Aqui hay dos opciones para abrir cypress y ejecturar las pruebas:
             <li>Con mi usuario de ghost quiero crear un post sin título</li>
             <li>Con mi usuario de ghost quiero crear un post y asignarlo a un tag</li>
          </ul>
-    <li>
+    </li>
 </ul>
 
