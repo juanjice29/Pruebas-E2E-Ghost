@@ -29,6 +29,7 @@
  </ul>
  
  <h2>Funciones y escenarios</h2>
+ <p>Las funcionalidads y escenarios escogidos fueron los siguientes:</p>
 <ul>
     <li>Hacer Login
         <ul>
