@@ -26,18 +26,20 @@ Aqui hay dos opciones para abrir cypress y ejecturar las pruebas:
 <h2>Pasos para correr las pruebas de regresión visual:</h2>
 
 <h2>Funciones y escenarios</h2>
+
+<p>Las funcionalidads y escenarios escogidos fueron los siguientes, adicionalmente los escenarios marcados con el simbolo <b>V4</b> , fueron escogidos para ser ejecutados sobre la version 4 de ghost(un total de 10 escenarios para ejecutarse sobre la version 4 de ghost):</p>
 <ul>
     <li>Hacer Login
         <ul>
-            <li>Con mi usuario y contraseña de ghost quiero hacer login en la pagina.</li>
-            <li>Con mi usuario y contraseña de ghost quiero hacer login en la pagina utilizando una contraseña incorrecta.</li>
-            <li>Con mi usuario y contraseña de ghost quiero hacer login en la pagina haciendo inyeccion de codigo</li>
+            <li>Con mi usuario y contraseña de ghost quiero hacer login en la pagina. <b>V4</b> </li>
+            <li>Con mi usuario y contraseña de ghost quiero hacer login en la pagina utilizando una contraseña incorrecta. <b>V4</b> </li>
+            <li>Con mi usuario y contraseña de ghost quiero hacer login en la pagina haciendo inyeccion de codigo. <b>V4</b> </li>
         </ul>
     </li>
      <li>Crear un Tag
         <ul>
-            <li>Con mi usuario de ghost creo un Tag</li>
-            <li>Con mi usuario de ghost creo un Tag sin titulo y luego lo corrijo</li>
+            <li>Con mi usuario de ghost creo un Tag. <b>V4</b> </li>
+            <li>Con mi usuario de ghost creo un Tag sin titulo y luego lo corrijo. <b>V4</b> </li>
             <li>Con mi usuario de ghost creo un Tag con un nombre que ya exista</li>
          </ul>
     </li>
