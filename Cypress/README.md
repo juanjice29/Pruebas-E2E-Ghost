@@ -53,20 +53,20 @@ Aqui hay dos opciones para abrir cypress y ejecturar las pruebas:
     </li>
      <li>4.Crear una página
         <ul>
-            <li>Con mi usuario de ghost quiero crear una página</li>
-            <li>Con mi usuario de ghost quiero crear una página sin descripción</li>
-            <li>Con mi usuario de ghost quiero crear una página sin título</li>
-            <li>Con mi usuario de ghost quiero crear un post y asignarla a un tag</li>
+            <li>Con mi usuario de ghost quiero crear una página. <b>V4</b></li>
+            <li>Con mi usuario de ghost quiero crear una página sin descripción. <b>V4</b></li>
+            <li>Con mi usuario de ghost quiero crear una página sin título. <b>V4</b></li>
+            <li>Con mi usuario de ghost quiero crear un post y asignarla a un tag. <b>V4</b></li>
             <li>Con mi usuario de ghost quiero crear una página y asignarla a un tag, usuario y extracto</li>
             <li>Con mi usuario de ghost quiero crear una página y programarla para que se publique en una fecha específica</li>
          </ul>
     </li>
      <li>5.Crear un Post
         <ul>
-            <li>Con mi usuario de ghost quiero crear un post. <b>V4</b></li>
-            <li>Con mi usuario de ghost quiero crear un post sin descripción. <b>V4</b></li>
-            <li>Con mi usuario de ghost quiero crear un post sin título. <b>V4</b></li>
-            <li>Con mi usuario de ghost quiero crear un post y asignarlo a un tag. <b>V4</b></li>
+            <li>Con mi usuario de ghost quiero crear un post</li>
+            <li>Con mi usuario de ghost quiero crear un post sin descripción</li>
+            <li>Con mi usuario de ghost quiero crear un post sin título</li>
+            <li>Con mi usuario de ghost quiero crear un post y asignarlo a un tag</li>
          </ul>
     </li>
 </ul>
