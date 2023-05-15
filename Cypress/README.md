@@ -1,5 +1,6 @@
 <h1>Pruebas-Ghost-E2E-Cypress</h1>
 <p>En este repositorio están los 20 escenarios y pruebas creadas con la herramienta cypress para la aplicación bajo pruebas ghost.</p>
+
 <h2>Requisitos:</h2>
 <ul>
 <li>Cypress</li>
@@ -21,5 +22,51 @@ Aqui hay dos opciones para abrir cypress y ejecturar las pruebas:
     <li>primero si existio algun test donde los asserts no fueron existosos, en la carpeta de <b>screenshots/**funcionalidad del fallo**</b>, se guardaran los screenshots.</li>
     <li>En la carpeta de <b>/videos</b>, quedan los videos de cada funcionalidad.</li>    
 </ul> </li>
+</ul>
+<h2>Pasos para correr las pruebas de regresión visual:</h2>
+
+
+<h2>Funciones y escenarios</h2>
+<ul>
+    <li>Hacer Login
+        <ul>
+            <li>Con mi usuario y contraseña de ghost quiero hacer login en la pagina.</li>
+            <li>Con mi usuario y contraseña de ghost quiero hacer login en la pagina utilizando una contraseña incorrecta.</li>
+            <li>Con mi usuario y contraseña de ghost quiero hacer login en la pagina haciendo inyeccion de codigo</li>
+        </ul>
+    <li>
+     <li>
+        <ul>Crear un Tag
+            <li>Con mi usuario de ghost creo un Tag</li>
+            <li>Con mi usuario de ghost creo un Tag sin titulo y luego lo corrijo</li>
+            <li>Con mi usuario de ghost creo un Tag con un nombre que ya exista</li>
+         </ul>
+    <li>
+     <li>
+        <ul>Enviar e-mail de invitacion al staff 
+            <li>Con mi usuario de ghost quiero enviar una invitacion a un email</li>
+            <li>Con mi usuario de ghost quiero enviar una invitacion a un email con email invalido</li>
+            <li>Con mi usuario de ghost quiero enviar una invitacion a un email ya existente en las invitaciones</li>
+            <li>Con mi usuario de ghost quiero enviar una invitacion a un email con un rol dirente</li>
+         </ul>
+    <li>
+     <li>
+        <ul>Crear una página
+            <li>Con mi usuario de ghost quiero crear una página</li>
+            <li>Con mi usuario de ghost quiero crear una página sin descripción</li>
+            <li>Con mi usuario de ghost quiero crear una página sin título</li>
+            <li>Con mi usuario de ghost quiero crear un post y asignarla a un tag</li>
+            <li>Con mi usuario de ghost quiero crear una página y asignarla a un tag, usuario y extracto</li>
+            <li>Con mi usuario de ghost quiero crear una página y programarla para que se publique en una fecha específica</li>
+         </ul>
+    <li>
+     <li>
+        <ul>Crear un Post
+            <li>Con mi usuario de ghost quiero crear un post</li>
+            <li>Con mi usuario de ghost quiero crear un post sin descripción</li>
+            <li>Con mi usuario de ghost quiero crear un post sin título</li>
+            <li>Con mi usuario de ghost quiero crear un post y asignarlo a un tag</li>
+         </ul>
+    <li>
 </ul>
 
