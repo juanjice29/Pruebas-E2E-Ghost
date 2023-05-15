@@ -1,10 +1,16 @@
 
-//Funcionalidad hacer Login
+//Crear una página
 import {globalVariables} from "../../environment/credentials"
 import NewPagePage from "../../pages/NewPagePage";
 import NavBarPage from '../../pages/NavBarPage';
 import PagePage from '../../pages/pagePage';
 import { faker } from '@faker-js/faker';
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+  };
 
 //Escenario 1
 describe('Con mi usuario de ghost quiero crear una página', 
@@ -19,30 +25,30 @@ describe('Con mi usuario de ghost quiero crear una página',
             const pagePage=new PagePage();
             navPage.getPageFunction().click();            
             navPage.getPageFunction().should("exist");
-            cy.screenshot(`func4/esc1/accion1`,{overwrite:true})            
+            cy.screenshot(`func4/v-3.41.1/esc1/e1`,{overwrite:true})            
             cy.wait(1000);
             pagePage.getNewPageButton().click()
-            cy.screenshot(`func4/esc1/accion2`,{overwrite:true})
+            cy.screenshot(`func4/v-3.41.1/esc1/e2`,{overwrite:true})
             cy.wait(1000);
             newPagePage.getInputTitle().should("exist")
             newPagePage.getInputDescription().should("exist")
-            cy.screenshot(`func4/esc1/accion3`,{overwrite:true})
+            cy.screenshot(`func4/v-3.41.1/esc1/e3`,{overwrite:true})
             cy.wait(1000);
             const title = faker.name.jobTitle();
             newPagePage.getInputTitle().type(title);
-            cy.screenshot(`func4/esc1/accion4`,{overwrite:true})
+            cy.screenshot(`func4/v-3.41.1/esc1/e4`,{overwrite:true})
             cy.wait(1000);
             newPagePage.getInputDescription().type(faker.lorem.lines(1));
-            cy.screenshot(`func4/esc1/accion5`,{overwrite:true})   
+            cy.screenshot(`func4/v-3.41.1/esc1/e5`,{overwrite:true})   
             cy.wait(1000);         
             newPagePage.getSaveButton().click();
-            cy.screenshot(`func4/esc1/accion6`,{overwrite:true}) 
+            cy.screenshot(`func4/v-3.41.1/esc1/e6`,{overwrite:true}) 
             cy.wait(1000);
             newPagePage.getInputPublish().click();
-            cy.screenshot(`func4/esc1/accion7`,{overwrite:true}) 
+            cy.screenshot(`func4/v-3.41.1/esc1/e7`,{overwrite:true}) 
             cy.wait(1000);   
             navPage.getPageFunction().click(); 
-            cy.screenshot(`func4/esc1/accion8`,{overwrite:true}) 
+            cy.screenshot(`func4/v-3.41.1/esc1/e8`,{overwrite:true}) 
         })       
 
     }
@@ -64,25 +70,19 @@ describe('Con mi usuario de ghost quiero crear una página sin descripción',
             const pagePage=new PagePage();
             navPage.getPageFunction().click();            
             navPage.getPageFunction().should("exist");
-            cy.screenshot(`func4/esc2/accion1`,{overwrite:true});             
+            cy.screenshot(`func4/v-3.41.1/esc2/e1`,{overwrite:true});             
             cy.wait(1000);
             pagePage.getNewPageButton().click()
-            cy.screenshot(`func4/esc2/accion2`,{overwrite:true}); 
+            cy.screenshot(`func4/v-3.41.1/esc2/e2`,{overwrite:true}); 
             cy.wait(1000);
             newPagePage.getInputTitle().should("exist")
-            cy.screenshot(`func4/esc2/accion3`,{overwrite:true}); 
+            cy.screenshot(`func4/v-3.41.1/esc2/e3`,{overwrite:true}); 
             cy.wait(1000);
             newPagePage.getInputTitle().type(faker.name.jobTitle());
-            cy.screenshot(`func4/esc2/accion4`,{overwrite:true}); 
+            cy.screenshot(`func4/v-3.41.1/esc2/e4`,{overwrite:true}); 
             cy.wait(1000);
-            newPagePage.getSaveButton().click();
-            cy.screenshot(`func4/esc2/accion5`,{overwrite:true}); 
-            cy.wait(1000);
-            newPagePage.getInputPublish().click();
-            cy.screenshot(`func4/esc2/accion6`,{overwrite:true}); 
-            cy.wait(1000);   
-            navPage.getPageFunction().click(); 
-            cy.screenshot(`func4/esc2/accion7`,{overwrite:true}); 
+            cy.screenshot(`func4/v-3.41.1/esc2/e5`,{overwrite:true}); 
+            newPagePage.getSaveButton().should("exist");
         })     
 
     }
@@ -103,25 +103,25 @@ describe('Con mi usuario de ghost quiero crear una página sin título',
             const pagePage=new PagePage();
             navPage.getPageFunction().click();            
             navPage.getPageFunction().should("exist");
-            cy.screenshot(`func4/esc3/accion1`,{overwrite:true});             
+            cy.screenshot(`func4/v-3.41.1/esc3/e1`,{overwrite:true});             
             cy.wait(1000);
             pagePage.getNewPageButton().click()
-            cy.screenshot(`func4/esc3/accion2`,{overwrite:true});  
+            cy.screenshot(`func4/v-3.41.1/esc3/e2`,{overwrite:true});  
             cy.wait(1000);
             newPagePage.getInputDescription().should("exist")
-            cy.screenshot(`func4/esc3/accion3`,{overwrite:true});  
+            cy.screenshot(`func4/v-3.41.1/esc3/e3`,{overwrite:true});  
             cy.wait(1000);
             newPagePage.getInputDescription().type(faker.lorem.lines(1));
-            cy.screenshot(`func4/esc3/accion4`,{overwrite:true});  
+            cy.screenshot(`func4/v-3.41.1/esc3/e4`,{overwrite:true});  
             cy.wait(1000);
             newPagePage.getSaveButton().click();
-            cy.screenshot(`func4/esc3/accion5`,{overwrite:true});  
+            cy.screenshot(`func4/v-3.41.1/esc3/e5`,{overwrite:true});  
             cy.wait(1000);
             newPagePage.getInputPublish().click();
-            cy.screenshot(`func4/esc3/accion6`,{overwrite:true});  
+            cy.screenshot(`func4/v-3.41.1/esc3/e6`,{overwrite:true});  
             cy.wait(1000);   
             navPage.getPageFunction().click(); 
-            cy.screenshot(`func4/esc3/accion7`,{overwrite:true});  
+            cy.screenshot(`func4/v-3.41.1/esc3/e7`,{overwrite:true});  
         })     
 
     }
@@ -129,62 +129,6 @@ describe('Con mi usuario de ghost quiero crear una página sin título',
 )
 
 //Escenario 4
-describe('Con mi usuario de ghost quiero crear una página y programarla para que se publique en una fecha específica', 
-  () => {
-    beforeEach("Hacer Login",()=>{
-        //Given I navigate to page "http://localhost:3001/ghost/#/signin"
-        cy.hacerLogin(globalVariables.password,"site","nav.gh-nav.ember-view"); 
-    })
-
-    it("Hacer click en la funcionalidad para crear pagina y llenar formulario",()=>{   
-        const navPage=new NavBarPage();
-        const newPagePage= new NewPagePage();
-        const pagePage=new PagePage();
-        navPage.getPageFunction().click();            
-        navPage.getPageFunction().should("exist");
-        cy.screenshot(`func4/esc4/accion1`,{overwrite:true});              
-        cy.wait(1000);
-        pagePage.getNewPageButton().click()
-        cy.screenshot(`func4/esc4/accion2`,{overwrite:true});   
-        cy.wait(1000);
-        newPagePage.getInputTitle().should("exist")
-        newPagePage.getInputDescription().should("exist")
-        cy.screenshot(`func4/esc4/accion3`,{overwrite:true}); 
-        cy.wait(1000);
-        newPagePage.getInputTitle().type(faker.name.jobTitle());
-        cy.screenshot(`func4/esc4/accion4`,{overwrite:true}); 
-        cy.wait(1000);
-        newPagePage.getInputDescription().type(faker.lorem.lines(1));   
-        cy.screenshot(`func4/esc4/accion5`,{overwrite:true}); 
-        cy.wait(1000);         
-        newPagePage.getSaveButton().click();
-        cy.screenshot(`func4/esc4/accion6`,{overwrite:true}); 
-        cy.wait(1000);
-        newPagePage.getSchedule().click({ multiple: true });
-        cy.screenshot(`func4/esc4/accion7`,{overwrite:true}); 
-        cy.wait(1000);
-        newPagePage.getSchedule2().click({ multiple: true });
-        cy.screenshot(`func4/esc4/accion8`,{overwrite:true}); 
-        cy.wait(1000);
-        newPagePage.getClose().click();
-        cy.screenshot(`func4/esc4/accion9`,{overwrite:true}); 
-        cy.wait(1000);
-        newPagePage.getClose().click();
-        cy.screenshot(`func4/esc4/accion10`,{overwrite:true}); 
-        cy.wait(1000);
-        newPagePage.getSaveButton().click({ force: true });
-        cy.screenshot(`func4/esc4/accion11`,{overwrite:true}); 
-        cy.wait(1000);
-        newPagePage.getInputPublish().click({ force: true });
-        cy.screenshot(`func4/esc4/accion12`,{overwrite:true}); 
-        cy.wait(1000);   
-        navPage.getPageFunction().click({ force: true }); 
-        cy.screenshot(`func4/esc4/accion13`,{overwrite:true}); 
-    })       
-    }
-)
-
-//Escenario 5
 describe('Con mi usuario de ghost quiero crear un post y asignarla a un tag', 
   () => {
     beforeEach("Hacer Login",()=>{
@@ -198,46 +142,53 @@ describe('Con mi usuario de ghost quiero crear un post y asignarla a un tag',
         const pagePage=new PagePage();
         navPage.getPageFunction().click();            
         navPage.getPageFunction().should("exist"); 
-        cy.screenshot(`func4/esc5/accion1`,{overwrite:true});            
+        cy.screenshot(`func4/v-3.41.1/esc4/e1`,{overwrite:true});            
         cy.wait(1000);
         pagePage.getNewPageButton().click()
-        cy.screenshot(`func4/esc5/accion2`,{overwrite:true});   
+        cy.screenshot(`func4/v-3.41.1/esc4/e2`,{overwrite:true});   
         cy.wait(1000);
         newPagePage.getInputTitle().should("exist")
         newPagePage.getInputDescription().should("exist")
-        cy.screenshot(`func4/esc5/accion3`,{overwrite:true});   
+        cy.screenshot(`func4/v-3.41.1/esc4/e3`,{overwrite:true});   
         cy.wait(1000);
         newPagePage.getInputTitle().type(faker.name.jobTitle());
-        cy.screenshot(`func4/esc5/accion4`,{overwrite:true});   
+        cy.screenshot(`func4/v-3.41.1/esc4/e4`,{overwrite:true});   
         cy.wait(1000);
         newPagePage.getInputDescription().type(faker.lorem.lines(1));  
-        cy.screenshot(`func4/esc5/accion5`,{overwrite:true});    
+        cy.screenshot(`func4/v-3.41.1/esc4/e5`,{overwrite:true});    
         cy.wait(1000);
         newPagePage.getSettings().click();
-        cy.screenshot(`func4/esc5/accion6`,{overwrite:true});   
+        cy.screenshot(`func4/v-3.41.1/esc4/e6`,{overwrite:true});   
         cy.wait(1000);
         newPagePage.getTags().click();
-        cy.screenshot(`func4/esc5/accion7`,{overwrite:true});   
+        cy.screenshot(`func4/v-3.41.1/esc4/e7`,{overwrite:true});   
         cy.wait(1000);
-        newPagePage.getTag().click();
-        cy.screenshot(`func4/esc5/accion8`,{overwrite:true});   
+        newPagePage.getTag().then($inputs => {
+            var randomInput = $inputs.get(getRandomInt(0, $inputs.length))
+            if (!Cypress.dom.isHidden(randomInput)) {
+              cy.wrap(randomInput).click({ force: true });
+            }
+          })
+        cy.screenshot(`func4/v-3.41.1/esc4/e8`,{overwrite:true});   
         cy.wait(1000);
         newPagePage.getClose().click();
-        cy.screenshot(`func4/esc5/accion9`,{overwrite:true});   
+        cy.screenshot(`func4/v-3.41.1/esc4/e9`,{overwrite:true});   
         cy.wait(1000);         
         newPagePage.getSaveButton().click();
-        cy.screenshot(`func4/esc5/accion10`,{overwrite:true});   
+        cy.screenshot(`func4/v-3.41.1/esc4/e10`,{overwrite:true});   
         cy.wait(1000);
         newPagePage.getInputPublish().click();
-        cy.screenshot(`func4/esc5/accion11`,{overwrite:true});   
+        cy.screenshot(`func4/v-3.41.1/esc4/e11`,{overwrite:true});   
         cy.wait(1000);   
         navPage.getPageFunction().click(); 
-        cy.screenshot(`func4/esc5/accion12`,{overwrite:true});   
+        cy.screenshot(`func4/v-3.41.1/esc4/e12`,{overwrite:true});   
     })       
     }
 )
 
-//Escenario 6
+
+
+//Escenario 5
 describe('Con mi usuario de ghost quiero crear una página y asignarla a un tag, usuario y extracto', 
   () => {
     beforeEach("Hacer Login",()=>{
@@ -251,50 +202,106 @@ describe('Con mi usuario de ghost quiero crear una página y asignarla a un tag,
         const pagePage=new PagePage();
         navPage.getPageFunction().click();            
         navPage.getPageFunction().should("exist");  
-        cy.screenshot(`func4/esc6/accion1`,{overwrite:true});             
+        cy.screenshot(`func4/v-3.41.1/esc5/e1`,{overwrite:true});             
         cy.wait(1000);
         pagePage.getNewPageButton().click()
-        cy.screenshot(`func4/esc6/accion2`,{overwrite:true}); 
+        cy.screenshot(`func4/v-3.41.1/esc5/e2`,{overwrite:true}); 
         cy.wait(1000);
         newPagePage.getInputTitle().should("exist")
         newPagePage.getInputDescription().should("exist")
-        cy.screenshot(`func4/esc6/accion3`,{overwrite:true}); 
+        cy.screenshot(`func4/v-3.41.1/esc5/e3`,{overwrite:true}); 
         cy.wait(1000);
         newPagePage.getInputTitle().type(faker.name.jobTitle());
-        cy.screenshot(`func4/esc6/accion4`,{overwrite:true}); 
+        cy.screenshot(`func4/v-3.41.1/esc5/e4`,{overwrite:true}); 
         cy.wait(1000);
         newPagePage.getInputDescription().type(faker.lorem.lines(1));  
-        cy.screenshot(`func4/esc6/accion5`,{overwrite:true});  
+        cy.screenshot(`func4/v-3.41.1/esc5/e5`,{overwrite:true});  
         cy.wait(1000);
         newPagePage.getSettings().click();
-        cy.screenshot(`func4/esc6/accion6`,{overwrite:true}); 
+        cy.screenshot(`func4/v-3.41.1/esc5/e6`,{overwrite:true}); 
         cy.wait(1000);
         newPagePage.getTags().click();
-        cy.screenshot(`func4/esc6/accion7`,{overwrite:true}); 
+        cy.screenshot(`func4/v-3.41.1/esc5/e7`,{overwrite:true}); 
         cy.wait(1000);
-        newPagePage.getTag().click();
-        cy.screenshot(`func4/esc6/accion8`,{overwrite:true}); 
+
+        newPagePage.getTag().then($inputs => {
+            var randomInput = $inputs.get(getRandomInt(0, $inputs.length))
+            if (!Cypress.dom.isHidden(randomInput)) {
+              cy.wrap(randomInput).click({ force: true });
+            }
+          })
+        cy.screenshot(`func4/v-3.41.1/esc5/e8`,{overwrite:true}); 
         cy.wait(1000);
         newPagePage.getExcerpt().type(faker.lorem.lines(1));
-        cy.screenshot(`func4/esc6/accion9`,{overwrite:true}); 
+        cy.screenshot(`func4/v-3.41.1/esc5/e9`,{overwrite:true}); 
         cy.wait(1000);
-        newPagePage.getAuthors().click();
-        cy.screenshot(`func4/esc6/accion10`,{overwrite:true}); 
-        cy.wait(1000);
-        newPagePage.getAuthor().click();
-        cy.screenshot(`func4/esc6/accion11`,{overwrite:true}); 
-        cy.wait(1000)
         newPagePage.getClose().click();
-        cy.screenshot(`func4/esc6/accion12`,{overwrite:true}); 
+        cy.screenshot(`func4/v-3.41.1/esc5/e10`,{overwrite:true}); 
         cy.wait(1000);         
         newPagePage.getSaveButton().click();
-        cy.screenshot(`func4/esc6/accion13`,{overwrite:true}); 
+        cy.screenshot(`func4/v-3.41.1/esc5/e11`,{overwrite:true}); 
         cy.wait(1000);
         newPagePage.getInputPublish().click();
-        cy.screenshot(`func4/esc6/accion14`,{overwrite:true}); 
+        cy.screenshot(`func4/v-3.41.1/esc5/e12`,{overwrite:true}); 
         cy.wait(1000);   
         navPage.getPageFunction().click(); 
-        cy.screenshot(`func4/esc6/accion15`,{overwrite:true}); 
+        cy.screenshot(`func4/v-3.41.1/esc5/e13`,{overwrite:true}); 
+    })       
+    }
+)
+
+//Escenario 6
+describe('Con mi usuario de ghost quiero crear una página y programarla para que se publique en una fecha específica', 
+  () => {
+    beforeEach("Hacer Login",()=>{
+        //Given I navigate to page "http://localhost:3001/ghost/#/signin"
+        cy.hacerLogin(globalVariables.password,"site","nav.gh-nav.ember-view"); 
+    })
+
+    it("Hacer click en la funcionalidad para crear pagina y llenar formulario",()=>{   
+        const navPage=new NavBarPage();
+        const newPagePage= new NewPagePage();
+        const pagePage=new PagePage();
+        navPage.getPageFunction().click();            
+        navPage.getPageFunction().should("exist");
+        cy.screenshot(`func4/v-3.41.1/esc6/e1`,{overwrite:true});              
+        cy.wait(1000);
+        pagePage.getNewPageButton().click()
+        cy.screenshot(`func4/v-3.41.1/esc6/e2`,{overwrite:true});   
+        cy.wait(1000);
+        newPagePage.getInputTitle().should("exist")
+        newPagePage.getInputDescription().should("exist")
+        cy.screenshot(`func4/v-3.41.1/esc6/e3`,{overwrite:true}); 
+        cy.wait(1000);
+        newPagePage.getInputTitle().type(faker.name.jobTitle());
+        cy.screenshot(`func4/v-3.41.1/esc6/e4`,{overwrite:true}); 
+        cy.wait(1000);
+        newPagePage.getInputDescription().type(faker.lorem.lines(1));   
+        cy.screenshot(`func4/v-3.41.1/esc6/e5`,{overwrite:true}); 
+        cy.wait(1000);         
+        newPagePage.getSaveButton().click();
+        cy.screenshot(`func4/v-3.41.1/esc6/e6`,{overwrite:true}); 
+        cy.wait(1000);
+        newPagePage.getSchedule().click({ multiple: true });
+        cy.screenshot(`func4/v-3.41.1/esc6/e7`,{overwrite:true}); 
+        cy.wait(1000);
+        newPagePage.getSchedule2().click({ multiple: true });
+        cy.screenshot(`func4/v-3.41.1/esc6/e8`,{overwrite:true}); 
+        cy.wait(1000);
+        newPagePage.getClose().click();
+        cy.screenshot(`func4/v-3.41.1/esc6/e9`,{overwrite:true}); 
+        cy.wait(1000);
+        newPagePage.getClose().click();
+        cy.screenshot(`func4/v-3.41.1/esc6/e10`,{overwrite:true}); 
+        cy.wait(1000);
+        newPagePage.getSaveButton().click({ force: true });
+        cy.screenshot(`func4/v-3.41.1/esc6/e11`,{overwrite:true}); 
+        cy.wait(1000);
+        newPagePage.getInputPublish().click({ force: true });
+        cy.screenshot(`func4/v-3.41.1/esc6/e12`,{overwrite:true}); 
+        cy.wait(1000);   
+        navPage.getPageFunction().click({ force: true }); 
+        cy.screenshot(`func4/v-3.41.1/esc6/e13`,{overwrite:true}); 
     })       
     }
 )

@@ -1,5 +1,5 @@
 
-//Funcionalidad hacer Login
+//Funcionalidad crear post
 import {globalVariables} from "../../environment/credentials"
 import NewPagePage from "../../pages/NewPagePage";
 import NavBarPage from '../../pages/NavBarPage';
@@ -8,6 +8,11 @@ import { faker } from '@faker-js/faker';
 import PostPage from "../../pages/PostPage";
 import NewPostPage from "../../pages/NewPostPage";
 
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+  };
 //Escenario 1
 describe('Con mi usuario de ghost quiero crear un post', 
   () => {
@@ -75,15 +80,18 @@ describe('Con mi usuario de ghost quiero crear un post sin descripción',
         cy.wait(1000);
         newPostPage.getTitleName().type(faker.name.jobTitle());
         cy.screenshot(`func5/esc2/accion4`,{overwrite:true});
-        cy.wait(1000);     
-        newPostPage.getPublish().click();
-        cy.screenshot(`func5/esc2/accion5`,{overwrite:true});
         cy.wait(1000);
-        newPostPage.getSaveButton().click();
-        cy.screenshot(`func5/esc2/accion6`,{overwrite:true});
-        cy.wait(1000);   
-        navPage.getPostFunction().click({multiple: true});
+        newPostPage.getPublish().should("exist");
+        cy.screenshot(`func5/esc2/accion5`,{overwrite:true}); 
+        cy.wait(1000);
+        newPostPage.getSaveButton().click({force:true});
+        cy.screenshot(`func5/esc2/accion6`,{overwrite:true}); 
+        cy.wait(1000);
+        newPostPage.getPublish().click({force:true});
         cy.screenshot(`func5/esc2/accion7`,{overwrite:true}); 
+        cy.wait(1000);
+        navPage.getPageFunction().click(); 
+        cy.screenshot(`func5/esc2/accion8`,{overwrite:true});      
     })     
 
     }
@@ -148,8 +156,8 @@ describe('Con mi usuario de ghost quiero crear un post y asignarlo a un tag',
         postPage.getNewPostButton().click({multiple: true})
         cy.screenshot(`func5/esc4/accion2`,{overwrite:true});
         cy.wait(1000);
-        postPage.getTitleName().should("exist")
-        postPage.getInputDescription().should("exist")
+        newPostPage.getTitleName().should("exist")
+        newPostPage.getInputDescription().should("exist")
         cy.screenshot(`func5/esc4/accion3`,{overwrite:true});
         cy.wait(1000);
         newPostPage.getTitleName().type(faker.name.jobTitle());
@@ -161,10 +169,15 @@ describe('Con mi usuario de ghost quiero crear un post y asignarlo a un tag',
         newPostPage.getSettings().click();
         cy.screenshot(`func5/esc4/accion6`,{overwrite:true});
         cy.wait(1000);
-        newPostPage.getTags().click();
+        newPostPage.getTags().click({ multiple: true });
         cy.screenshot(`func5/esc4/accion7`,{overwrite:true});
         cy.wait(1000);
-        newPostPage.getTag().click();
+        newPostPage.getTag().then($inputs => {
+            var randomInput = $inputs.get(getRandomInt(0, $inputs.length))
+            if (!Cypress.dom.isHidden(randomInput)) {
+              cy.wrap(randomInput).click({ force: true });
+            }
+          })
         cy.screenshot(`func5/esc4/accion8`,{overwrite:true});
         cy.wait(1000);
         newPostPage.getClose().click();

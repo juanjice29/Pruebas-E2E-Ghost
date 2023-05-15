@@ -1,11 +1,11 @@
 class NavBarPage{
 
     getPostFunction(){
-        return cy.get("li a[href='#/posts/']")
+        return cy.get("a[href='#/posts/']")
     }
     getPageFunction(){
 
-        return cy.get("li a[href='#/pages/']")
+        return cy.get("a[href='#/pages/']")
     }
     getTagFunction(){
         return cy.get("li a[href='#/tags/']")

@@ -3,7 +3,7 @@ const config = require("./config.json");
 const fs = require('fs');
 const {options } = config;
 async function executeTest(){
-    let resultInfo = {"func1":{"esc1":{},"esc2":{},"esc3":{}},"func2":{"esc1":{},"esc2":{}}}
+    let resultInfo = {"func1":{"esc1":{},"esc2":{},"esc3":{}},"func2":{"esc1":{},"esc2":{}},"func4":{"esc1":{},"esc2":{},"esc3":{},"esc4":{},"esc5":{}}}
     let datetime = new Date().toISOString().replace(/:/g,".");
     let ejecuciones={"funcionalidades":{
         "func1":{
@@ -14,8 +14,14 @@ async function executeTest(){
         "func2":{
             "esc1":8,
             "esc2":10          
-        }
-             
+        },
+        "func4":{
+            "esc1":8,
+            "esc2":5,
+            "esc3":7,
+            "esc4":12,
+            "esc5":13
+        },   
     }}
     if (!fs.existsSync(`./results/${datetime}`)){
         fs.mkdirSync(`./results/${datetime}`, { recursive: true });
