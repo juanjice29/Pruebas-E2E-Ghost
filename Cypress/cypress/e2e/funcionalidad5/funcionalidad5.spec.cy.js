@@ -14,7 +14,7 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
   };
 //Escenario 1
-describe('Con mi usuario de ghost quiero crear un post', 
+describe('Con mi usuario de ghost quiero crear un post ', 
   () => {
     beforeEach("Hacer Login",()=>{
         //Given I navigate to page "http://localhost:3001/ghost/#/signin"
