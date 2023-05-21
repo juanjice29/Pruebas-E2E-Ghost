@@ -45,7 +45,7 @@
         "description":"Curabitur gravida nisi at nibh. In hac habitasse platea dictumst."
     },
     "E3":{
-        "nombre":"() { 0; }; touch /tmp/blns.shellshock1.fail;",
+        "nombre":"❤️ 💔 💌 💕 💞 💓 💗 💖 💘 💝 💟 💜 💛 💚 💙0",
         "color":"d25382",
         "slug":"Ranitidine Hydrochloride",
         "description":"In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus."
@@ -98,6 +98,14 @@
         "color":"!@#$%^&*()",
         "slug":"Customer-focused",
         "description":"Praesent id massa id nisl venenatis lacinia."
+    }
+},
+"staff":{
+    "E1":{
+        "email":" "
+    },
+    "E2":{
+        "email":"社會科學院語學研究所"
     }
 }
 }    
