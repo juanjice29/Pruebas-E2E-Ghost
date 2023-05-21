@@ -6,6 +6,9 @@ class NewTagPage{
     getInputSlug(){
         return cy.get("#tag-slug");
     }
+    getInputColor(){
+        return cy.get("input[name='accent-color']");
+    }
     getInputDescription(){
         return cy.get("#tag-description");
     }
@@ -18,6 +21,7 @@ class NewTagPage{
     getErrorModal(){
         return cy.get(".modal-footer .gh-btn.gh-btn-red");
     }
+    
     
 }
 export default NewTagPage

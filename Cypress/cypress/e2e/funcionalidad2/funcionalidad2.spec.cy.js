@@ -8,8 +8,7 @@ import NewTagPage from '../../pages/NewTagPAge';
 //Escenario 1
 
 describe('Con mi usuario de ghost creo un Tag', 
-  () => {
-    
+  () => {    
         
         beforeEach("Hacer Login",()=>{
             //Given I navigate to page "http://localhost:3001/ghost/#/signin"

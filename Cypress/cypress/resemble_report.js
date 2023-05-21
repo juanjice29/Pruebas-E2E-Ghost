@@ -23,8 +23,8 @@ async function executeTest(){
             "esc5":13
         },   
     }}
-    if (!fs.existsSync(`./results/${datetime}`)){
-        fs.mkdirSync(`./results/${datetime}`, { recursive: true });
+    if (!fs.existsSync(`./results/Resemble_${datetime}`)){
+        fs.mkdirSync(`./results/Resemble_${datetime}`, { recursive: true });
     }
     for(let i in ejecuciones.funcionalidades){
         for(let j in ejecuciones.funcionalidades[i]){
@@ -50,12 +50,12 @@ async function executeTest(){
     let navigationBar=createNavigation(ejecuciones.funcionalidades);
     for(let i in ejecuciones.funcionalidades){
         for(let j in resultInfo[i]){
-        fs.writeFileSync(`./results/${datetime}/report_${i}_${j}.html`, createReport(datetime, resultInfo[i][j],i,j,navigationBar));
+        fs.writeFileSync(`./results/Resemble_${datetime}/report_${i}_${j}.html`, createReport(datetime, resultInfo[i][j],i,j,navigationBar));
         
         }
         
     }
-    fs.copyFileSync('./results/report.css', `./results/${datetime}/report.css`);
+    fs.copyFileSync('./results/report.css', `./results/Resemble_${datetime}/report.css`);
     
     
 }
@@ -66,13 +66,13 @@ function createNavigation(resInfo){
     let funcionalidad=1;
     for(let i in resInfo){
         html=html+`<div class="dropdown">
-                    <button class="dropbtn">Funcionalidad ${funcionalidad}
+                    <button class="dropbtn">Funcionalidad ${i.split('').pop()}
                         <i class="fa fa-caret-down"></i>
                     </button>
                     <div class="dropdown-content">`
         let escenario=1;
         for(let j in resInfo[i]){
-            html=html+`<a href="report_${i}_${j}.html">Escenario ${escenario}</a>`
+            html=html+`<a href="report_${i}_${j}.html">Escenario ${j.split('').pop()}</a>`
             escenario++;
         }
         html=html+`</div></div>`

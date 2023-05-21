@@ -1,6 +1,7 @@
 import {globalVariables} from "../../environment/credentials"
-//Escenario 1
-describe('Con mi usuario y contraseña de ghost quiero hacer login en la pagina', 
+
+//Escenario 1 -- Escenario
+describe('F1E1-v4', 
   () => {
     it('Hacer Login',()=>{
       cy.hacerLoginV4(globalVariables.password,"dashboard","nav.gh-nav","esc1");
@@ -9,7 +10,7 @@ describe('Con mi usuario y contraseña de ghost quiero hacer login en la pagina'
 )
 //Escenario 2
 
-describe('Con mi usuario y contraseña de ghost quiero hacer login en la pagina utilizando una contraseña incorrecta', 
+describe('F1E2-v4', 
   () => {
     it('Hacer Login',()=>{
       cy.hacerLoginV4("Worng password","signin","p.main-error","esc2");
@@ -17,7 +18,7 @@ describe('Con mi usuario y contraseña de ghost quiero hacer login en la pagina 
   
 )
 //Escneario 3
-describe('Con mi usuario y contraseña de ghost quiero hacer login en la pagina haciendo inyeccion de codigo', 
+describe('F1E3-v4', 
   () => {
     it('Hacer Login',()=>{
       cy.hacerLoginV4("' or 1=1","signin","p.main-error","esc3");
