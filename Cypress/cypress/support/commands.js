@@ -28,6 +28,11 @@ import NavBarPage from '../pages/NavBarPage';
 import TagPage from '../pages/TagPage';
 import NewTagPage from '../pages/NewTagPAge';
 import StaffPage from "../pages/StaffPage";
+import PagePage from '../pages/pagePage';
+import NewPagePage from '../pages/NewPagePage';
+import PostPage from "../pages/PostPage";
+import NewPostPage from "../pages/NewPostPage";
+
 
 Cypress.Commands.add('hacerClickEnFuncionalidad',(url_link)=>{
     cy.get(`a[href="#/${url_link}/"]`).first().click()
@@ -178,3 +183,49 @@ Cypress.Commands.add('crearTagVacio',()=>{
     newTagPage.getErrorModal().should("exist"); 
 })
 
+Cypress.Commands.add('crearPage',(title,description)=>{
+    cy.hacerLogin(globalVariables.password,"site","nav.gh-nav.ember-view");
+    const navPage=new NavBarPage();
+    const pagePage=new PagePage();
+    const newPagePage= new NewPagePage();
+    navPage.getPageFunction().click();            
+    navPage.getPageFunction().should("exist");
+    cy.wait(1000);
+    pagePage.getNewPageButton().click()
+    cy.wait(1000);
+    newPagePage.getInputTitle().should("exist")
+    newPagePage.getInputDescription().should("exist")
+    cy.wait(1000);
+    newPagePage.getInputTitle().type(title, {force:true});
+    cy.wait(1000);
+    newPagePage.getInputDescription().type(description);  
+    cy.wait(1000);         
+    newPagePage.getSaveButton().click({force:true});
+    cy.wait(1000);
+    newPagePage.getInputPublish().click({force:true});
+    cy.wait(1000);   
+    navPage.getPageFunction().click({force:true}); 
+})
+
+Cypress.Commands.add('crearPost',(title, description)=>{
+    cy.hacerLogin(globalVariables.password,"site","nav.gh-nav.ember-view");
+    const navPage=new NavBarPage();
+    const newPostPage= new NewPostPage();
+    const postPage=new PostPage();
+    navPage.getPostFunction().click( {multiple: true} );            
+    navPage.getPostFunction().should("exist");           
+    cy.wait(1000);
+    postPage.getNewPostButton().click({force: true});
+    cy.wait(1000);
+    newPostPage.getTitleName().should("exist");
+    cy.wait(1000);
+    newPostPage.getTitleName().type(title);
+    cy.wait(1000);
+    newPostPage.getInputDescription().type(description);    
+    cy.wait(1000);         
+    newPostPage.getPublish().click({force:true});
+    cy.wait(1000);
+    newPostPage.getSaveButton().click({force:true});
+    cy.wait(1000);   
+    navPage.getPostFunction().click({multiple: true}); 
+})
