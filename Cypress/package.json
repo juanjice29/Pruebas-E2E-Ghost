@@ -4,7 +4,8 @@
   "description": "",
   "main": "cypress.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:solo:record":"cypress run --record --key dc43f22d-b04f-42da-8f1b-7b71de772fc3 \"cypress/e2e/funcionalidad1/esc_apriori.spec.cy.js,cypress/e2e/funcionalidad1/esc_psudo_aleatorios.spec.cy.js,cypress/e2e/funcionalidad1/esc_aleatorios.spec.cy.js\""
   },
   "author": "",
   "license": "ISC",
