@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 4,
-    "start": "2023-05-14T23:20:30.558Z",
-    "end": "2023-05-14T23:21:55.834Z",
-    "duration": 85276,
+    "start": "2023-05-22T00:59:04.893Z",
+    "end": "2023-05-22T00:59:55.489Z",
+    "duration": 50596,
     "testsRegistered": 4,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "1a3e6970-9ef2-4b95-b07c-8e96c07ca8a3",
+      "uuid": "c9cba6a6-c783-4de7-9329-172dd7c917ab",
       "title": "",
       "fullFile": "cypress\\e2e\\funcionalidad5\\funcionalidad5.spec.cy.js",
       "file": "cypress\\e2e\\funcionalidad5\\funcionalidad5.spec.cy.js",
@@ -27,8 +27,8 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "5ed070c3-bdf0-4e92-bbcb-ca4a9a3de3ae",
-          "title": "Con mi usuario de ghost quiero crear un post",
+          "uuid": "259177d4-568d-490c-94fb-39428628beca",
+          "title": "Con mi usuario de ghost quiero crear un post ",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
@@ -36,9 +36,9 @@
           "tests": [
             {
               "title": "Hacer click en la funcionalidad para crear post y llenar formulario",
-              "fullTitle": "Con mi usuario de ghost quiero crear un post Hacer click en la funcionalidad para crear post y llenar formulario",
+              "fullTitle": "Con mi usuario de ghost quiero crear un post  Hacer click en la funcionalidad para crear post y llenar formulario",
               "timedOut": null,
-              "duration": 26498,
+              "duration": 11793,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -47,12 +47,12 @@
               "context": null,
               "code": "const navPage = new _NavBarPage.default();\nconst newPostPage = new _NewPostPage.default();\nconst postPage = new _PostPage.default();\nnavPage.getPostFunction().click({\n  multiple: true\n});\nnavPage.getPostFunction().should(\"exist\");\ncy.screenshot(`func5/esc1/accion1`, {\n  overwrite: true\n});\ncy.wait(1000);\npostPage.getNewPostButton().click({\n  force: true\n});\ncy.screenshot(`func5/esc1/accion1`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getTitleName().should(\"exist\");\nnewPostPage.getInputDescription().should(\"exist\");\ncy.screenshot(`func5/esc1/accion1`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getTitleName().type(_faker.faker.name.jobTitle());\ncy.screenshot(`func5/esc1/accion1`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getInputDescription().type(_faker.faker.lorem.lines(1));\ncy.screenshot(`func5/esc1/accion1`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getPublish().click();\ncy.screenshot(`func5/esc1/accion1`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getSaveButton().click();\ncy.screenshot(`func5/esc1/accion1`, {\n  overwrite: true\n});\ncy.wait(1000);\nnavPage.getPostFunction().click({\n  multiple: true\n});\ncy.screenshot(`func5/esc1/accion1`, {\n  overwrite: true\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `li a[href='#/posts/']`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `li a[href='#/posts/']`, but never found it.\n    at NavBarPage.getPostFunction (webpack:///./cypress/pages/NavBarPage.js:4:18)\n    at Context.eval (webpack:///./cypress/e2e/funcionalidad5/funcionalidad5.spec.cy.js:45:20)",
-                "diff": null
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Con mi usuario de ghost qui...`",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Con mi usuario de ghost qui...`\n    at Context.eval (webpack:///./cypress/support/commands.js:70:13)",
+                "diff": "- '\\'http://localhost:3001/ghost/#/signin\\''\n+ '\\'http://localhost:3001/ghost/#/site\\''\n"
               },
-              "uuid": "faced74d-1234-41f3-9d26-d51628589520",
-              "parentUUID": "5ed070c3-bdf0-4e92-bbcb-ca4a9a3de3ae",
+              "uuid": "9e44dda7-30ca-4cdd-a1ef-8e212c688f7b",
+              "parentUUID": "259177d4-568d-490c-94fb-39428628beca",
               "isHook": false,
               "skipped": false
             }
@@ -60,17 +60,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "faced74d-1234-41f3-9d26-d51628589520"
+            "9e44dda7-30ca-4cdd-a1ef-8e212c688f7b"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 26498,
+          "duration": 11793,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "2bdcbbe0-5332-40b9-931b-a65c2cc4b4ea",
+          "uuid": "ce57ed33-2c83-4613-9a60-d394609a9937",
           "title": "Con mi usuario de ghost quiero crear un post sin descripción",
           "fullFile": "",
           "file": "",
@@ -81,21 +81,21 @@
               "title": "Hacer click en la funcionalidad para crear post y llenar formulario",
               "fullTitle": "Con mi usuario de ghost quiero crear un post sin descripción Hacer click en la funcionalidad para crear post y llenar formulario",
               "timedOut": null,
-              "duration": 20828,
+              "duration": 11482,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "const navPage = new _NavBarPage.default();\nconst newPostPage = new _NewPostPage.default();\nconst postPage = new _PostPage.default();\nnavPage.getPostFunction().click({\n  multiple: true\n});\nnavPage.getPostFunction().should(\"exist\");\ncy.screenshot(`func5/esc2/accion1`, {\n  overwrite: true\n});\ncy.wait(1000);\npostPage.getNewPostButton().click({\n  multiple: true\n});\ncy.screenshot(`func5/esc2/accion2`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getTitleName().should(\"exist\");\ncy.screenshot(`func5/esc2/accion3`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getTitleName().type(_faker.faker.name.jobTitle());\ncy.screenshot(`func5/esc2/accion4`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getPublish().click();\ncy.screenshot(`func5/esc2/accion5`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getSaveButton().click();\ncy.screenshot(`func5/esc2/accion6`, {\n  overwrite: true\n});\ncy.wait(1000);\nnavPage.getPostFunction().click({\n  multiple: true\n});\ncy.screenshot(`func5/esc2/accion7`, {\n  overwrite: true\n});",
+              "code": "const navPage = new _NavBarPage.default();\nconst newPostPage = new _NewPostPage.default();\nconst postPage = new _PostPage.default();\nnavPage.getPostFunction().click({\n  multiple: true\n});\nnavPage.getPostFunction().should(\"exist\");\ncy.screenshot(`func5/esc2/accion1`, {\n  overwrite: true\n});\ncy.wait(1000);\npostPage.getNewPostButton().click({\n  multiple: true\n});\ncy.screenshot(`func5/esc2/accion2`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getTitleName().should(\"exist\");\ncy.screenshot(`func5/esc2/accion3`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getTitleName().type(_faker.faker.name.jobTitle());\ncy.screenshot(`func5/esc2/accion4`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getPublish().should(\"exist\");\ncy.screenshot(`func5/esc2/accion5`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getSaveButton().click({\n  force: true\n});\ncy.screenshot(`func5/esc2/accion6`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getPublish().click({\n  force: true\n});\ncy.screenshot(`func5/esc2/accion7`, {\n  overwrite: true\n});\ncy.wait(1000);\nnavPage.getPageFunction().click();\ncy.screenshot(`func5/esc2/accion8`, {\n  overwrite: true\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `div.ember-view.ember-basic-dropdown-trigger.gh-btn.gh-btn-outline.gh-publishmenu-trigger`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `div.ember-view.ember-basic-dropdown-trigger.gh-btn.gh-btn-outline.gh-publishmenu-trigger`, but never found it.\n    at NewPostPage.getPublish (webpack:///./cypress/pages/NewPostPage.js:7:18)\n    at Context.eval (webpack:///./cypress/e2e/funcionalidad5/funcionalidad5.spec.cy.js:79:20)",
-                "diff": null
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Con mi usuario de ghost qui...`",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Con mi usuario de ghost qui...`\n    at Context.eval (webpack:///./cypress/support/commands.js:70:13)",
+                "diff": "- '\\'http://localhost:3001/ghost/#/signin\\''\n+ '\\'http://localhost:3001/ghost/#/site\\''\n"
               },
-              "uuid": "5647b026-2a1f-48fe-915d-83bebaf5e48f",
-              "parentUUID": "2bdcbbe0-5332-40b9-931b-a65c2cc4b4ea",
+              "uuid": "6cb74235-a0f1-4ad9-b87a-261a502d744c",
+              "parentUUID": "ce57ed33-2c83-4613-9a60-d394609a9937",
               "isHook": false,
               "skipped": false
             }
@@ -103,17 +103,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "5647b026-2a1f-48fe-915d-83bebaf5e48f"
+            "6cb74235-a0f1-4ad9-b87a-261a502d744c"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 20828,
+          "duration": 11482,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "554638db-f27e-4042-84bf-23bfa55ffa0b",
+          "uuid": "7e7931ca-29a9-4db7-b6fe-8f2ffe624ea1",
           "title": "Con mi usuario de ghost quiero crear un post sin título",
           "fullFile": "",
           "file": "",
@@ -124,7 +124,7 @@
               "title": "Hacer click en la funcionalidad para crear post y llenar formulario",
               "fullTitle": "Con mi usuario de ghost quiero crear un post sin título Hacer click en la funcionalidad para crear post y llenar formulario",
               "timedOut": null,
-              "duration": 24820,
+              "duration": 11956,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -133,12 +133,12 @@
               "context": null,
               "code": "const navPage = new _NavBarPage.default();\nconst newPostPage = new _NewPostPage.default();\nconst postPage = new _PostPage.default();\nnavPage.getPostFunction().click({\n  multiple: true\n});\nnavPage.getPostFunction().should(\"exist\");\ncy.screenshot(`func5/esc3/accion1`, {\n  overwrite: true\n});\ncy.wait(1000);\npostPage.getNewPostButton().click({\n  multiple: true\n});\ncy.screenshot(`func5/esc3/accion2`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getInputDescription().should(\"exist\");\ncy.screenshot(`func5/esc3/accion3`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getInputDescription().type(_faker.faker.lorem.lines(1));\ncy.screenshot(`func5/esc3/accion4`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getPublish().click();\ncy.screenshot(`func5/esc3/accion5`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getSaveButton().click();\ncy.screenshot(`func5/esc3/accion6`, {\n  overwrite: true\n});\ncy.wait(1000);\nnavPage.getPostFunction().click({\n  multiple: true\n});\ncy.screenshot(`func5/esc3/accion7`, {\n  overwrite: true\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `li a[href='#/posts/']`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `li a[href='#/posts/']`, but never found it.\n    at NavBarPage.getPostFunction (webpack:///./cypress/pages/NavBarPage.js:4:18)\n    at Context.eval (webpack:///./cypress/e2e/funcionalidad5/funcionalidad5.spec.cy.js:124:16)",
-                "diff": null
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Con mi usuario de ghost qui...`",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Con mi usuario de ghost qui...`\n    at Context.eval (webpack:///./cypress/support/commands.js:70:13)",
+                "diff": "- '\\'http://localhost:3001/ghost/#/signin\\''\n+ '\\'http://localhost:3001/ghost/#/site\\''\n"
               },
-              "uuid": "dd09f228-4793-4be1-bf6a-290fcaa21d64",
-              "parentUUID": "554638db-f27e-4042-84bf-23bfa55ffa0b",
+              "uuid": "033bf5d4-c0f0-4036-b7ec-acfacbb9e20e",
+              "parentUUID": "7e7931ca-29a9-4db7-b6fe-8f2ffe624ea1",
               "isHook": false,
               "skipped": false
             }
@@ -146,17 +146,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "dd09f228-4793-4be1-bf6a-290fcaa21d64"
+            "033bf5d4-c0f0-4036-b7ec-acfacbb9e20e"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 24820,
+          "duration": 11956,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "8c62e8f9-e051-4c5f-9cbd-cebe37464dba",
+          "uuid": "f936bacf-61ee-4df2-83f4-66a9251dd42d",
           "title": "Con mi usuario de ghost quiero crear un post y asignarlo a un tag",
           "fullFile": "",
           "file": "",
@@ -167,21 +167,21 @@
               "title": "Hacer click en la funcionalidad para crear pagina y llenar formulario",
               "fullTitle": "Con mi usuario de ghost quiero crear un post y asignarlo a un tag Hacer click en la funcionalidad para crear pagina y llenar formulario",
               "timedOut": null,
-              "duration": 9608,
+              "duration": 11458,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "const navPage = new _NavBarPage.default();\nconst newPostPage = new _NewPostPage.default();\nconst postPage = new _PostPage.default();\nnavPage.getPostFunction().click({\n  multiple: true\n});\nnavPage.getPostFunction().should(\"exist\");\ncy.screenshot(`func5/esc4/accion1`, {\n  overwrite: true\n});\ncy.wait(1000);\npostPage.getNewPostButton().click({\n  multiple: true\n});\ncy.screenshot(`func5/esc4/accion2`, {\n  overwrite: true\n});\ncy.wait(1000);\npostPage.getTitleName().should(\"exist\");\npostPage.getInputDescription().should(\"exist\");\ncy.screenshot(`func5/esc4/accion3`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getTitleName().type(_faker.faker.name.jobTitle());\ncy.screenshot(`func5/esc4/accion4`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getInputDescription().type(_faker.faker.lorem.lines(1));\ncy.screenshot(`func5/esc4/accion5`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getSettings().click();\ncy.screenshot(`func5/esc4/accion6`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getTags().click();\ncy.screenshot(`func5/esc4/accion7`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getTag().click();\ncy.screenshot(`func5/esc4/accion8`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getClose().click();\ncy.screenshot(`func5/esc4/accion9`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getPublish().click();\ncy.screenshot(`func5/esc4/accion10`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getSaveButton().click();\ncy.screenshot(`func5/esc4/accion11`, {\n  overwrite: true\n});\ncy.wait(1000);\nnavPage.getPostFunction().click({\n  multiple: true\n});\ncy.screenshot(`func5/esc4/accion12`, {\n  overwrite: true\n});",
+              "code": "const navPage = new _NavBarPage.default();\nconst newPostPage = new _NewPostPage.default();\nconst postPage = new _PostPage.default();\nnavPage.getPostFunction().click({\n  multiple: true\n});\nnavPage.getPostFunction().should(\"exist\");\ncy.screenshot(`func5/esc4/accion1`, {\n  overwrite: true\n});\ncy.wait(1000);\npostPage.getNewPostButton().click({\n  multiple: true\n});\ncy.screenshot(`func5/esc4/accion2`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getTitleName().should(\"exist\");\nnewPostPage.getInputDescription().should(\"exist\");\ncy.screenshot(`func5/esc4/accion3`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getTitleName().type(_faker.faker.name.jobTitle());\ncy.screenshot(`func5/esc4/accion4`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getInputDescription().type(_faker.faker.lorem.lines(1));\ncy.screenshot(`func5/esc4/accion5`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getSettings().click();\ncy.screenshot(`func5/esc4/accion6`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getTags().click({\n  multiple: true\n});\ncy.screenshot(`func5/esc4/accion7`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getTag().then($inputs => {\n  var randomInput = $inputs.get(getRandomInt(0, $inputs.length));\n  if (!Cypress.dom.isHidden(randomInput)) {\n    cy.wrap(randomInput).click({\n      force: true\n    });\n  }\n});\ncy.screenshot(`func5/esc4/accion8`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getClose().click();\ncy.screenshot(`func5/esc4/accion9`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getPublish().click();\ncy.screenshot(`func5/esc4/accion10`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getSaveButton().click();\ncy.screenshot(`func5/esc4/accion11`, {\n  overwrite: true\n});\ncy.wait(1000);\nnavPage.getPostFunction().click({\n  multiple: true\n});\ncy.screenshot(`func5/esc4/accion12`, {\n  overwrite: true\n});",
               "err": {
-                "message": "TypeError: postPage.getTitleName is not a function",
-                "estack": "TypeError: postPage.getTitleName is not a function\n    at Context.eval (webpack:///./cypress/e2e/funcionalidad5/funcionalidad5.spec.cy.js:151:17)",
-                "diff": null
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Con mi usuario de ghost qui...`",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Con mi usuario de ghost qui...`\n    at Context.eval (webpack:///./cypress/support/commands.js:70:13)",
+                "diff": "- '\\'http://localhost:3001/ghost/#/signin\\''\n+ '\\'http://localhost:3001/ghost/#/site\\''\n"
               },
-              "uuid": "4bebecf2-5efe-4f12-971e-46987ddb5fd0",
-              "parentUUID": "8c62e8f9-e051-4c5f-9cbd-cebe37464dba",
+              "uuid": "379ca4f0-1db3-420f-96e8-58668d9706a2",
+              "parentUUID": "f936bacf-61ee-4df2-83f4-66a9251dd42d",
               "isHook": false,
               "skipped": false
             }
@@ -189,11 +189,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "4bebecf2-5efe-4f12-971e-46987ddb5fd0"
+            "379ca4f0-1db3-420f-96e8-58668d9706a2"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 9608,
+          "duration": 11458,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
