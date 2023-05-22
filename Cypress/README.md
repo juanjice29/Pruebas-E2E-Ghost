@@ -39,10 +39,11 @@ Cada archivo html contiene los diferentes screenshots que se tomaron en cada esc
     <li>1. esc_aleatorios.spec.cy.js en donde se listan parte de los escenarios con datos aleatorios</li>
     <li>2. esc_apriori.spec.cy.js en donde se listan parte de los escenarios con datos a priori</li>
     <li>3. Esc_pseudo_aleatorios.spec.cy.js en donde se listan parte de los escenarios con datos pseudo aleatorios</li>
-    <li>3. funcionalidadN.spec.cy.js en donde se listan otra parte de escenarios con datos aleatorios</li>
+   
 </ul>
-
-<p> Para correr las funcionalidades con los tres escenarios, puede usar los comandos definidos para correr las pruebas f1 ejecutarán todos los escenarios de la funcionalidad 1 y así sucesivamente</p>
+<p>Dentro de cada archivo .spec.cy.js se encuentran todos los escenarios relacionados con la funcionalidad, la nomenclatura que se opto para nombrar estos escenarios fue la siguiente:</p>
+<p>Nombramos la funcion seguido de un guion y ponemos el tipo de estrategia de generacion de datos, la nomenclatura es AP,D,A para las estrategias a priori,dinamico,aleatorio respectivamente, por ultimo seguido de otro guion ponemos el escenario <Funcion>-<Estrategia>-<Escenario>, por ejemplo si estamos probando los escenarios dinamicos de la funcionalidad 1, una nomenclatura del nombre del escenario seria <b>F1-AP-E5</b></p>
+<p> Para correr las funcionalidades con los tres tipos de estrategias de generacion de datos, puede usar los comandos definidos para correr las pruebas f1 ejecutarán todos los escenarios de los 120 requeridos de la funcionalidad 1 y así sucesivamente</p>
 <ul>
     <li>npm run solo:f1</li>
     <li>npm run solo:f2</li>
