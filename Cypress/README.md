@@ -56,3 +56,4 @@ Cada archivo html contiene los diferentes screenshots que se tomaron en cada esc
 <p>npm run all:data_strategy</p>
 
 <p>Se utilizaron 120 escenarios, que están listados en la wiki de este proyecto, con la descripción de cómo se relacionaron los data pools.</p>
+<p>Para mas informacion de los escenarios y estrategias, consultar la wiki.</p>
