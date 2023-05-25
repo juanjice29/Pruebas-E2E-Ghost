@@ -2,7 +2,7 @@ import {globalVariables} from "../../environment/credentials"
 import { faker } from '@faker-js/faker';
 import NavBarPage from '../../pages/NavBarPage';
 import TagPage from '../../pages/TagPage';
-import NewTagPage from '../../pages/NewTagPAge';
+import NewTagPage from '../../pages/NewTagPage';
 
  //Funcionalidad Crear un Tag
 //Escenario 1

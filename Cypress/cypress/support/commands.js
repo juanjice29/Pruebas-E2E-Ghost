@@ -26,7 +26,7 @@
 import {globalVariables, globalVariablesv4} from "../environment/credentials"
 import NavBarPage from '../pages/NavBarPage';
 import TagPage from '../pages/TagPage';
-import NewTagPage from '../pages/NewTagPAge';
+import NewTagPage from '../pages/NewTagPage';
 import StaffPage from "../pages/StaffPage";
 import PagePage from '../pages/pagePage';
 import NewPagePage from '../pages/NewPagePage';

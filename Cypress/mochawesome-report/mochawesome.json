@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 4,
-    "tests": 4,
-    "passes": 0,
+    "suites": 11,
+    "tests": 11,
+    "passes": 3,
     "pending": 0,
-    "failures": 4,
-    "start": "2023-05-22T00:59:04.893Z",
-    "end": "2023-05-22T00:59:55.489Z",
-    "duration": 50596,
-    "testsRegistered": 4,
-    "passPercent": 0,
+    "failures": 8,
+    "start": "2023-05-25T12:46:22.074Z",
+    "end": "2023-05-25T12:50:00.272Z",
+    "duration": 218198,
+    "testsRegistered": 11,
+    "passPercent": 27.27272727272727,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "c9cba6a6-c783-4de7-9329-172dd7c917ab",
+      "uuid": "a632f493-831d-41b1-aa2d-5c74472a2bf5",
       "title": "",
-      "fullFile": "cypress\\e2e\\funcionalidad5\\funcionalidad5.spec.cy.js",
-      "file": "cypress\\e2e\\funcionalidad5\\funcionalidad5.spec.cy.js",
+      "fullFile": "cypress\\e2e\\funcionalidad2\\esc_aleatorios.spec.cy.js",
+      "file": "cypress\\e2e\\funcionalidad2\\esc_aleatorios.spec.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "259177d4-568d-490c-94fb-39428628beca",
-          "title": "Con mi usuario de ghost quiero crear un post ",
+          "uuid": "915832c1-939c-43f5-bc38-88c978f57215",
+          "title": "F2-A-E1",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Hacer click en la funcionalidad para crear post y llenar formulario",
-              "fullTitle": "Con mi usuario de ghost quiero crear un post  Hacer click en la funcionalidad para crear post y llenar formulario",
+              "title": "Crear Tag",
+              "fullTitle": "F2-A-E1 Crear Tag",
               "timedOut": null,
-              "duration": 11793,
+              "duration": 21841,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "const navPage = new _NavBarPage.default();\nconst newPostPage = new _NewPostPage.default();\nconst postPage = new _PostPage.default();\nnavPage.getPostFunction().click({\n  multiple: true\n});\nnavPage.getPostFunction().should(\"exist\");\ncy.screenshot(`func5/esc1/accion1`, {\n  overwrite: true\n});\ncy.wait(1000);\npostPage.getNewPostButton().click({\n  force: true\n});\ncy.screenshot(`func5/esc1/accion1`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getTitleName().should(\"exist\");\nnewPostPage.getInputDescription().should(\"exist\");\ncy.screenshot(`func5/esc1/accion1`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getTitleName().type(_faker.faker.name.jobTitle());\ncy.screenshot(`func5/esc1/accion1`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getInputDescription().type(_faker.faker.lorem.lines(1));\ncy.screenshot(`func5/esc1/accion1`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getPublish().click();\ncy.screenshot(`func5/esc1/accion1`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getSaveButton().click();\ncy.screenshot(`func5/esc1/accion1`, {\n  overwrite: true\n});\ncy.wait(1000);\nnavPage.getPostFunction().click({\n  multiple: true\n});\ncy.screenshot(`func5/esc1/accion1`, {\n  overwrite: true\n});",
+              "code": "cy.crearTag(name, slug, description, color);",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Con mi usuario de ghost qui...`",
-                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Con mi usuario de ghost qui...`\n    at Context.eval (webpack:///./cypress/support/commands.js:70:13)",
-                "diff": "- '\\'http://localhost:3001/ghost/#/signin\\''\n+ '\\'http://localhost:3001/ghost/#/site\\''\n"
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `a[href='#/tags/-  /']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `a[href='#/tags/-  /']`, but never found it.\n    at Context.eval (webpack:///./cypress/support/commands.js:169:48)",
+                "diff": null
               },
-              "uuid": "9e44dda7-30ca-4cdd-a1ef-8e212c688f7b",
-              "parentUUID": "259177d4-568d-490c-94fb-39428628beca",
+              "uuid": "7f424879-b177-443a-96c5-0365597eb6c0",
+              "parentUUID": "915832c1-939c-43f5-bc38-88c978f57215",
               "isHook": false,
               "skipped": false
             }
@@ -60,85 +60,81 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "9e44dda7-30ca-4cdd-a1ef-8e212c688f7b"
+            "7f424879-b177-443a-96c5-0365597eb6c0"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 11793,
+          "duration": 21841,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "ce57ed33-2c83-4613-9a60-d394609a9937",
-          "title": "Con mi usuario de ghost quiero crear un post sin descripción",
+          "uuid": "323298e7-fd0b-466b-9590-c6072a8e72c1",
+          "title": "F2-A-E2",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Hacer click en la funcionalidad para crear post y llenar formulario",
-              "fullTitle": "Con mi usuario de ghost quiero crear un post sin descripción Hacer click en la funcionalidad para crear post y llenar formulario",
+              "title": "Crear Tag",
+              "fullTitle": "F2-A-E2 Crear Tag",
               "timedOut": null,
-              "duration": 11482,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 17877,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
-              "code": "const navPage = new _NavBarPage.default();\nconst newPostPage = new _NewPostPage.default();\nconst postPage = new _PostPage.default();\nnavPage.getPostFunction().click({\n  multiple: true\n});\nnavPage.getPostFunction().should(\"exist\");\ncy.screenshot(`func5/esc2/accion1`, {\n  overwrite: true\n});\ncy.wait(1000);\npostPage.getNewPostButton().click({\n  multiple: true\n});\ncy.screenshot(`func5/esc2/accion2`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getTitleName().should(\"exist\");\ncy.screenshot(`func5/esc2/accion3`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getTitleName().type(_faker.faker.name.jobTitle());\ncy.screenshot(`func5/esc2/accion4`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getPublish().should(\"exist\");\ncy.screenshot(`func5/esc2/accion5`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getSaveButton().click({\n  force: true\n});\ncy.screenshot(`func5/esc2/accion6`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getPublish().click({\n  force: true\n});\ncy.screenshot(`func5/esc2/accion7`, {\n  overwrite: true\n});\ncy.wait(1000);\nnavPage.getPageFunction().click();\ncy.screenshot(`func5/esc2/accion8`, {\n  overwrite: true\n});",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Con mi usuario de ghost qui...`",
-                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Con mi usuario de ghost qui...`\n    at Context.eval (webpack:///./cypress/support/commands.js:70:13)",
-                "diff": "- '\\'http://localhost:3001/ghost/#/signin\\''\n+ '\\'http://localhost:3001/ghost/#/site\\''\n"
-              },
-              "uuid": "6cb74235-a0f1-4ad9-b87a-261a502d744c",
-              "parentUUID": "ce57ed33-2c83-4613-9a60-d394609a9937",
+              "code": "cy.crearTag(name, slug, description, color);",
+              "err": {},
+              "uuid": "d13ee76e-0052-4024-b62f-02386ac5e587",
+              "parentUUID": "323298e7-fd0b-466b-9590-c6072a8e72c1",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "6cb74235-a0f1-4ad9-b87a-261a502d744c"
+          "passes": [
+            "d13ee76e-0052-4024-b62f-02386ac5e587"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 11482,
+          "duration": 17877,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "7e7931ca-29a9-4db7-b6fe-8f2ffe624ea1",
-          "title": "Con mi usuario de ghost quiero crear un post sin título",
+          "uuid": "1428abe1-99a1-4e85-988f-a84a3f57a572",
+          "title": "F2-A-E3",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Hacer click en la funcionalidad para crear post y llenar formulario",
-              "fullTitle": "Con mi usuario de ghost quiero crear un post sin título Hacer click en la funcionalidad para crear post y llenar formulario",
+              "title": "Crear Tag",
+              "fullTitle": "F2-A-E3 Crear Tag",
               "timedOut": null,
-              "duration": 11956,
+              "duration": 11721,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "const navPage = new _NavBarPage.default();\nconst newPostPage = new _NewPostPage.default();\nconst postPage = new _PostPage.default();\nnavPage.getPostFunction().click({\n  multiple: true\n});\nnavPage.getPostFunction().should(\"exist\");\ncy.screenshot(`func5/esc3/accion1`, {\n  overwrite: true\n});\ncy.wait(1000);\npostPage.getNewPostButton().click({\n  multiple: true\n});\ncy.screenshot(`func5/esc3/accion2`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getInputDescription().should(\"exist\");\ncy.screenshot(`func5/esc3/accion3`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getInputDescription().type(_faker.faker.lorem.lines(1));\ncy.screenshot(`func5/esc3/accion4`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getPublish().click();\ncy.screenshot(`func5/esc3/accion5`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getSaveButton().click();\ncy.screenshot(`func5/esc3/accion6`, {\n  overwrite: true\n});\ncy.wait(1000);\nnavPage.getPostFunction().click({\n  multiple: true\n});\ncy.screenshot(`func5/esc3/accion7`, {\n  overwrite: true\n});",
+              "code": "cy.crearTag(name, slug, description, color);",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Con mi usuario de ghost qui...`",
-                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Con mi usuario de ghost qui...`\n    at Context.eval (webpack:///./cypress/support/commands.js:70:13)",
-                "diff": "- '\\'http://localhost:3001/ghost/#/signin\\''\n+ '\\'http://localhost:3001/ghost/#/site\\''\n"
+                "message": "CypressError: `cy.type()` can only accept a string or number. You passed in: `undefined`\n\nhttps://on.cypress.io/type",
+                "estack": "CypressError: `cy.type()` can only accept a string or number. You passed in: `undefined`\n\nhttps://on.cypress.io/type\n    at Context.type (http://localhost:3001/__cypress/runner/cypress_runner.js:134332:76)\n    at wrapped (http://localhost:3001/__cypress/runner/cypress_runner.js:151182:19)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/support/commands.js:158:30)",
+                "diff": null
               },
-              "uuid": "033bf5d4-c0f0-4036-b7ec-acfacbb9e20e",
-              "parentUUID": "7e7931ca-29a9-4db7-b6fe-8f2ffe624ea1",
+              "uuid": "b0e47a70-a70b-4286-8b46-ac062d98ea9d",
+              "parentUUID": "1428abe1-99a1-4e85-988f-a84a3f57a572",
               "isHook": false,
               "skipped": false
             }
@@ -146,42 +142,42 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "033bf5d4-c0f0-4036-b7ec-acfacbb9e20e"
+            "b0e47a70-a70b-4286-8b46-ac062d98ea9d"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 11956,
+          "duration": 11721,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "f936bacf-61ee-4df2-83f4-66a9251dd42d",
-          "title": "Con mi usuario de ghost quiero crear un post y asignarlo a un tag",
+          "uuid": "de49b105-f924-4fa7-b128-c8c9f427fc15",
+          "title": "F2-A-E4",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Hacer click en la funcionalidad para crear pagina y llenar formulario",
-              "fullTitle": "Con mi usuario de ghost quiero crear un post y asignarlo a un tag Hacer click en la funcionalidad para crear pagina y llenar formulario",
+              "title": "Crear Tag",
+              "fullTitle": "F2-A-E4 Crear Tag",
               "timedOut": null,
-              "duration": 11458,
+              "duration": 231,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "const navPage = new _NavBarPage.default();\nconst newPostPage = new _NewPostPage.default();\nconst postPage = new _PostPage.default();\nnavPage.getPostFunction().click({\n  multiple: true\n});\nnavPage.getPostFunction().should(\"exist\");\ncy.screenshot(`func5/esc4/accion1`, {\n  overwrite: true\n});\ncy.wait(1000);\npostPage.getNewPostButton().click({\n  multiple: true\n});\ncy.screenshot(`func5/esc4/accion2`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getTitleName().should(\"exist\");\nnewPostPage.getInputDescription().should(\"exist\");\ncy.screenshot(`func5/esc4/accion3`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getTitleName().type(_faker.faker.name.jobTitle());\ncy.screenshot(`func5/esc4/accion4`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getInputDescription().type(_faker.faker.lorem.lines(1));\ncy.screenshot(`func5/esc4/accion5`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getSettings().click();\ncy.screenshot(`func5/esc4/accion6`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getTags().click({\n  multiple: true\n});\ncy.screenshot(`func5/esc4/accion7`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getTag().then($inputs => {\n  var randomInput = $inputs.get(getRandomInt(0, $inputs.length));\n  if (!Cypress.dom.isHidden(randomInput)) {\n    cy.wrap(randomInput).click({\n      force: true\n    });\n  }\n});\ncy.screenshot(`func5/esc4/accion8`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getClose().click();\ncy.screenshot(`func5/esc4/accion9`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getPublish().click();\ncy.screenshot(`func5/esc4/accion10`, {\n  overwrite: true\n});\ncy.wait(1000);\nnewPostPage.getSaveButton().click();\ncy.screenshot(`func5/esc4/accion11`, {\n  overwrite: true\n});\ncy.wait(1000);\nnavPage.getPostFunction().click({\n  multiple: true\n});\ncy.screenshot(`func5/esc4/accion12`, {\n  overwrite: true\n});",
+              "code": "cy.crearTag(name, slug, description, color);",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Con mi usuario de ghost qui...`",
-                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Con mi usuario de ghost qui...`\n    at Context.eval (webpack:///./cypress/support/commands.js:70:13)",
-                "diff": "- '\\'http://localhost:3001/ghost/#/signin\\''\n+ '\\'http://localhost:3001/ghost/#/site\\''\n"
+                "message": "TypeError: Cannot read properties of undefined (reading 'replace')",
+                "estack": "TypeError: Cannot read properties of undefined (reading 'replace')\n    at Context.eval (webpack:///./cypress/support/commands.js:169:30)",
+                "diff": null
               },
-              "uuid": "379ca4f0-1db3-420f-96e8-58668d9706a2",
-              "parentUUID": "f936bacf-61ee-4df2-83f4-66a9251dd42d",
+              "uuid": "24167ea3-9ad3-421c-b92d-eed541c64684",
+              "parentUUID": "de49b105-f924-4fa7-b128-c8c9f427fc15",
               "isHook": false,
               "skipped": false
             }
@@ -189,11 +185,304 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "379ca4f0-1db3-420f-96e8-58668d9706a2"
+            "24167ea3-9ad3-421c-b92d-eed541c64684"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 11458,
+          "duration": 231,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "fd76f43a-1a66-420d-902f-8df3d425d3ef",
+          "title": "F2-A-E5",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Crear Tag",
+              "fullTitle": "F2-A-E5 Crear Tag",
+              "timedOut": null,
+              "duration": 21024,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.crearTag(name, slug, description, color);",
+              "err": {},
+              "uuid": "8c67adde-0a22-40ae-b5ee-69bf1ad5e527",
+              "parentUUID": "fd76f43a-1a66-420d-902f-8df3d425d3ef",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8c67adde-0a22-40ae-b5ee-69bf1ad5e527"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 21024,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "c37c9c76-66c0-4271-a46a-1076f9e3fb27",
+          "title": "F2-A-E6",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Crear Tag",
+              "fullTitle": "F2-A-E6 Crear Tag",
+              "timedOut": null,
+              "duration": 27446,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.crearTag(name, slug, description, color);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `a[href='#/tags/likewise/']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `a[href='#/tags/likewise/']`, but never found it.\n    at Context.eval (webpack:///./cypress/support/commands.js:169:48)",
+                "diff": null
+              },
+              "uuid": "53527937-ac75-4763-8aa3-a1dc02b4aae6",
+              "parentUUID": "c37c9c76-66c0-4271-a46a-1076f9e3fb27",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "53527937-ac75-4763-8aa3-a1dc02b4aae6"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 27446,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "e9b1227a-a9ff-42b3-ba51-9bd2cb976d17",
+          "title": "F2-A-E7",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Crear Tag",
+              "fullTitle": "F2-A-E7 Crear Tag",
+              "timedOut": null,
+              "duration": 29989,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.crearTag(name, slug, description, color);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `a[href='#/tags/Cupiditate-temporibus perspiciatis cupiditate debitis consectetur at.\nAsperiores nisi harum ab libero.\nNesciunt vel officiis.\nAccusantium quo repudiandae.\nQuidem officiis sed quis voluptates cumque nostrum.\nIpsum dignissimos repellendus optio cum nam rerum alias.\nAt sed repellendus numquam cum dignissimos.\nLaboriosam alias cupiditate deleniti modi illum accusantium exercitationem./']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `a[href='#/tags/Cupiditate-temporibus perspiciatis cupiditate debitis consectetur at.\nAsperiores nisi harum ab libero.\nNesciunt vel officiis.\nAccusantium quo repudiandae.\nQuidem officiis sed quis voluptates cumque nostrum.\nIpsum dignissimos repellendus optio cum nam rerum alias.\nAt sed repellendus numquam cum dignissimos.\nLaboriosam alias cupiditate deleniti modi illum accusantium exercitationem./']`, but never found it.\n    at Context.eval (webpack:///./cypress/support/commands.js:169:48)",
+                "diff": null
+              },
+              "uuid": "e69fef83-5184-4af0-931e-99d0db11a86f",
+              "parentUUID": "e9b1227a-a9ff-42b3-ba51-9bd2cb976d17",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "e69fef83-5184-4af0-931e-99d0db11a86f"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 29989,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "98e99097-3b73-42bc-859d-1e81ba72de35",
+          "title": "F2-A-E8",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Crear Tag",
+              "fullTitle": "F2-A-E8 Crear Tag",
+              "timedOut": null,
+              "duration": 15656,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.crearTag(name, slug, description, color);",
+              "err": {
+                "message": "CypressError: `cy.type()` can only accept a string or number. You passed in: `undefined`\n\nhttps://on.cypress.io/type",
+                "estack": "CypressError: `cy.type()` can only accept a string or number. You passed in: `undefined`\n\nhttps://on.cypress.io/type\n    at Context.type (http://localhost:3001/__cypress/runner/cypress_runner.js:134332:76)\n    at wrapped (http://localhost:3001/__cypress/runner/cypress_runner.js:151182:19)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/support/commands.js:164:37)",
+                "diff": null
+              },
+              "uuid": "9e99a1c6-485d-4f84-8246-8e020782ae92",
+              "parentUUID": "98e99097-3b73-42bc-859d-1e81ba72de35",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "9e99a1c6-485d-4f84-8246-8e020782ae92"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 15656,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "47269767-5694-4248-a346-38fe597c7778",
+          "title": "F2-A-E9",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Crear Tag",
+              "fullTitle": "F2-A-E9 Crear Tag",
+              "timedOut": null,
+              "duration": 23534,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.crearTag(name, slug, description, color);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `a[href='#/tags/https://active-swine.org/']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `a[href='#/tags/https://active-swine.org/']`, but never found it.\n    at Context.eval (webpack:///./cypress/support/commands.js:169:48)",
+                "diff": null
+              },
+              "uuid": "37e87057-eb5a-4697-bbf2-d8b97779c757",
+              "parentUUID": "47269767-5694-4248-a346-38fe597c7778",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "37e87057-eb5a-4697-bbf2-d8b97779c757"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 23534,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "75d7f543-b411-41a5-9e70-2815bd00b3a0",
+          "title": "F2-A-E10",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Crear Tag",
+              "fullTitle": "F2-A-E10 Crear Tag",
+              "timedOut": null,
+              "duration": 19595,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.crearTag(name, slug, description, color);",
+              "err": {},
+              "uuid": "f81ef517-af14-4443-b6b5-99a70fa7f343",
+              "parentUUID": "75d7f543-b411-41a5-9e70-2815bd00b3a0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f81ef517-af14-4443-b6b5-99a70fa7f343"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 19595,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "94e7c279-ef31-4f65-9a93-deacc3c5de19",
+          "title": "F2-A-E11",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Crear Tag",
+              "fullTitle": "F2-A-E11 Crear Tag",
+              "timedOut": null,
+              "duration": 23495,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.crearTag(name, slug, description, color);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `a[href='#/tags/unless/']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `a[href='#/tags/unless/']`, but never found it.\n    at Context.eval (webpack:///./cypress/support/commands.js:169:48)",
+                "diff": null
+              },
+              "uuid": "edead084-c41e-4fd8-9f5a-08ff6c770558",
+              "parentUUID": "94e7c279-ef31-4f65-9a93-deacc3c5de19",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "edead084-c41e-4fd8-9f5a-08ff6c770558"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 23495,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
