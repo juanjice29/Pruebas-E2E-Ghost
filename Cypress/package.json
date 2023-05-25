@@ -10,7 +10,7 @@
       "solo:f3":"cypress run --record --key dc43f22d-b04f-42da-8f1b-7b71de772fc3 --spec \"cypress/e2e/funcionalidad3/esc_apriori.spec.cy.js,cypress/e2e/funcionalidad3/esc_psudo_aleatorios.spec.cy.js,cypress/e2e/funcionalidad3/esc_aleatorios.spec.cy.js\"",
       "solo:f4":"cypress run --record --key dc43f22d-b04f-42da-8f1b-7b71de772fc3 --spec \"cypress/e2e/funcionalidad4/esc_apriori.spec.cy.js,cypress/e2e/funcionalidad4/esc_psudo_aleatorios.spec.cy.js,cypress/e2e/funcionalidad4/esc_aleatorios.spec.cy.js\"",
       "solo:f5":"cypress run --record --key dc43f22d-b04f-42da-8f1b-7b71de772fc3 --spec \"cypress/e2e/funcionalidad5/esc_apriori.spec.cy.js,cypress/e2e/funcionalidad5/esc_psudo_aleatorios.spec.cy.js,cypress/e2e/funcionalidad5/esc_aleatorios.spec.cy.js\"",
-      "all:data_strategy":"npm run run:f1 && npm run run:f2 && npm run run:f3 && npm run run:f4 && npm run run:f5"
+      "all:data_strategy":"npm run solo:f1 && npm run solo:f2 && npm run solo:f3 && npm run solo:f4 && npm run solo:f5"
     },
     "author": "",
     "license": "ISC",
