@@ -2,14 +2,14 @@
   "stats": {
     "suites": 11,
     "tests": 11,
-    "passes": 3,
+    "passes": 0,
     "pending": 0,
-    "failures": 8,
-    "start": "2023-05-25T12:46:22.074Z",
-    "end": "2023-05-25T12:50:00.272Z",
-    "duration": 218198,
+    "failures": 11,
+    "start": "2023-05-27T14:40:46.995Z",
+    "end": "2023-05-27T14:42:48.189Z",
+    "duration": 121194,
     "testsRegistered": 11,
-    "passPercent": 27.27272727272727,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "a632f493-831d-41b1-aa2d-5c74472a2bf5",
+      "uuid": "dc2c86ad-0887-4538-966b-2b9566ad80b9",
       "title": "",
       "fullFile": "cypress\\e2e\\funcionalidad2\\esc_aleatorios.spec.cy.js",
       "file": "cypress\\e2e\\funcionalidad2\\esc_aleatorios.spec.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "915832c1-939c-43f5-bc38-88c978f57215",
+          "uuid": "1720473f-bd26-462b-95fe-efcc53042e56",
           "title": "F2-A-E1",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Crear Tag",
               "fullTitle": "F2-A-E1 Crear Tag",
               "timedOut": null,
-              "duration": 21841,
+              "duration": 11811,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -47,12 +47,12 @@
               "context": null,
               "code": "cy.crearTag(name, slug, description, color);",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `a[href='#/tags/-  /']`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `a[href='#/tags/-  /']`, but never found it.\n    at Context.eval (webpack:///./cypress/support/commands.js:169:48)",
-                "diff": null
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'\n    at Context.eval (webpack:///./cypress/support/commands.js:70:13)",
+                "diff": "- 'http://localhost:3001/ghost/#/signin'\n+ 'http://localhost:3001/ghost/#/site'\n"
               },
-              "uuid": "7f424879-b177-443a-96c5-0365597eb6c0",
-              "parentUUID": "915832c1-939c-43f5-bc38-88c978f57215",
+              "uuid": "ae83471a-d775-42ac-adbb-216282a46880",
+              "parentUUID": "1720473f-bd26-462b-95fe-efcc53042e56",
               "isHook": false,
               "skipped": false
             }
@@ -60,17 +60,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "7f424879-b177-443a-96c5-0365597eb6c0"
+            "ae83471a-d775-42ac-adbb-216282a46880"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 21841,
+          "duration": 11811,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "323298e7-fd0b-466b-9590-c6072a8e72c1",
+          "uuid": "eba489e7-4b59-4f73-a21a-51e5b7545f0c",
           "title": "F2-A-E2",
           "fullFile": "",
           "file": "",
@@ -81,35 +81,39 @@
               "title": "Crear Tag",
               "fullTitle": "F2-A-E2 Crear Tag",
               "timedOut": null,
-              "duration": 17877,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "duration": 11330,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "cy.crearTag(name, slug, description, color);",
-              "err": {},
-              "uuid": "d13ee76e-0052-4024-b62f-02386ac5e587",
-              "parentUUID": "323298e7-fd0b-466b-9590-c6072a8e72c1",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'\n    at Context.eval (webpack:///./cypress/support/commands.js:70:13)",
+                "diff": "- 'http://localhost:3001/ghost/#/signin'\n+ 'http://localhost:3001/ghost/#/site'\n"
+              },
+              "uuid": "d7fbd372-36a1-4227-ab22-78ce37ef423b",
+              "parentUUID": "eba489e7-4b59-4f73-a21a-51e5b7545f0c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "d13ee76e-0052-4024-b62f-02386ac5e587"
+          "passes": [],
+          "failures": [
+            "d7fbd372-36a1-4227-ab22-78ce37ef423b"
           ],
-          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 17877,
+          "duration": 11330,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "1428abe1-99a1-4e85-988f-a84a3f57a572",
+          "uuid": "5fe018aa-cf5f-4e19-a452-2c13e8272195",
           "title": "F2-A-E3",
           "fullFile": "",
           "file": "",
@@ -120,7 +124,7 @@
               "title": "Crear Tag",
               "fullTitle": "F2-A-E3 Crear Tag",
               "timedOut": null,
-              "duration": 11721,
+              "duration": 11445,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -129,12 +133,12 @@
               "context": null,
               "code": "cy.crearTag(name, slug, description, color);",
               "err": {
-                "message": "CypressError: `cy.type()` can only accept a string or number. You passed in: `undefined`\n\nhttps://on.cypress.io/type",
-                "estack": "CypressError: `cy.type()` can only accept a string or number. You passed in: `undefined`\n\nhttps://on.cypress.io/type\n    at Context.type (http://localhost:3001/__cypress/runner/cypress_runner.js:134332:76)\n    at wrapped (http://localhost:3001/__cypress/runner/cypress_runner.js:151182:19)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/support/commands.js:158:30)",
-                "diff": null
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'\n    at Context.eval (webpack:///./cypress/support/commands.js:70:13)",
+                "diff": "- 'http://localhost:3001/ghost/#/signin'\n+ 'http://localhost:3001/ghost/#/site'\n"
               },
-              "uuid": "b0e47a70-a70b-4286-8b46-ac062d98ea9d",
-              "parentUUID": "1428abe1-99a1-4e85-988f-a84a3f57a572",
+              "uuid": "36fea61c-4432-41c4-9ab0-8283b9a9c5b3",
+              "parentUUID": "5fe018aa-cf5f-4e19-a452-2c13e8272195",
               "isHook": false,
               "skipped": false
             }
@@ -142,17 +146,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "b0e47a70-a70b-4286-8b46-ac062d98ea9d"
+            "36fea61c-4432-41c4-9ab0-8283b9a9c5b3"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 11721,
+          "duration": 11445,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "de49b105-f924-4fa7-b128-c8c9f427fc15",
+          "uuid": "2661f2e6-8efb-49ce-ba91-a515d85f8641",
           "title": "F2-A-E4",
           "fullFile": "",
           "file": "",
@@ -163,7 +167,7 @@
               "title": "Crear Tag",
               "fullTitle": "F2-A-E4 Crear Tag",
               "timedOut": null,
-              "duration": 231,
+              "duration": 303,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -176,8 +180,8 @@
                 "estack": "TypeError: Cannot read properties of undefined (reading 'replace')\n    at Context.eval (webpack:///./cypress/support/commands.js:169:30)",
                 "diff": null
               },
-              "uuid": "24167ea3-9ad3-421c-b92d-eed541c64684",
-              "parentUUID": "de49b105-f924-4fa7-b128-c8c9f427fc15",
+              "uuid": "1a15eb2a-7707-4701-9abd-58eb89630705",
+              "parentUUID": "2661f2e6-8efb-49ce-ba91-a515d85f8641",
               "isHook": false,
               "skipped": false
             }
@@ -185,17 +189,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "24167ea3-9ad3-421c-b92d-eed541c64684"
+            "1a15eb2a-7707-4701-9abd-58eb89630705"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 231,
+          "duration": 303,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "fd76f43a-1a66-420d-902f-8df3d425d3ef",
+          "uuid": "0ad26306-3eb7-417d-bbfb-e2c30e565e49",
           "title": "F2-A-E5",
           "fullFile": "",
           "file": "",
@@ -206,35 +210,39 @@
               "title": "Crear Tag",
               "fullTitle": "F2-A-E5 Crear Tag",
               "timedOut": null,
-              "duration": 21024,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "duration": 11692,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "cy.crearTag(name, slug, description, color);",
-              "err": {},
-              "uuid": "8c67adde-0a22-40ae-b5ee-69bf1ad5e527",
-              "parentUUID": "fd76f43a-1a66-420d-902f-8df3d425d3ef",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'\n    at Context.eval (webpack:///./cypress/support/commands.js:70:13)",
+                "diff": "- 'http://localhost:3001/ghost/#/signin'\n+ 'http://localhost:3001/ghost/#/site'\n"
+              },
+              "uuid": "8168fd60-bed4-4601-b163-4d9195952471",
+              "parentUUID": "0ad26306-3eb7-417d-bbfb-e2c30e565e49",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "8c67adde-0a22-40ae-b5ee-69bf1ad5e527"
+          "passes": [],
+          "failures": [
+            "8168fd60-bed4-4601-b163-4d9195952471"
           ],
-          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 21024,
+          "duration": 11692,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "c37c9c76-66c0-4271-a46a-1076f9e3fb27",
+          "uuid": "7f8fb80c-0173-47d2-9ac6-e531a43c96d9",
           "title": "F2-A-E6",
           "fullFile": "",
           "file": "",
@@ -245,7 +253,7 @@
               "title": "Crear Tag",
               "fullTitle": "F2-A-E6 Crear Tag",
               "timedOut": null,
-              "duration": 27446,
+              "duration": 11507,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -254,12 +262,12 @@
               "context": null,
               "code": "cy.crearTag(name, slug, description, color);",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `a[href='#/tags/likewise/']`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `a[href='#/tags/likewise/']`, but never found it.\n    at Context.eval (webpack:///./cypress/support/commands.js:169:48)",
-                "diff": null
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'\n    at Context.eval (webpack:///./cypress/support/commands.js:70:13)",
+                "diff": "- 'http://localhost:3001/ghost/#/signin'\n+ 'http://localhost:3001/ghost/#/site'\n"
               },
-              "uuid": "53527937-ac75-4763-8aa3-a1dc02b4aae6",
-              "parentUUID": "c37c9c76-66c0-4271-a46a-1076f9e3fb27",
+              "uuid": "98445c96-0276-441f-9cd5-7fc3ed360480",
+              "parentUUID": "7f8fb80c-0173-47d2-9ac6-e531a43c96d9",
               "isHook": false,
               "skipped": false
             }
@@ -267,17 +275,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "53527937-ac75-4763-8aa3-a1dc02b4aae6"
+            "98445c96-0276-441f-9cd5-7fc3ed360480"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 27446,
+          "duration": 11507,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "e9b1227a-a9ff-42b3-ba51-9bd2cb976d17",
+          "uuid": "2f981688-cca2-4777-acdb-3560edc0e065",
           "title": "F2-A-E7",
           "fullFile": "",
           "file": "",
@@ -288,7 +296,7 @@
               "title": "Crear Tag",
               "fullTitle": "F2-A-E7 Crear Tag",
               "timedOut": null,
-              "duration": 29989,
+              "duration": 11798,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -297,12 +305,12 @@
               "context": null,
               "code": "cy.crearTag(name, slug, description, color);",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `a[href='#/tags/Cupiditate-temporibus perspiciatis cupiditate debitis consectetur at.\nAsperiores nisi harum ab libero.\nNesciunt vel officiis.\nAccusantium quo repudiandae.\nQuidem officiis sed quis voluptates cumque nostrum.\nIpsum dignissimos repellendus optio cum nam rerum alias.\nAt sed repellendus numquam cum dignissimos.\nLaboriosam alias cupiditate deleniti modi illum accusantium exercitationem./']`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `a[href='#/tags/Cupiditate-temporibus perspiciatis cupiditate debitis consectetur at.\nAsperiores nisi harum ab libero.\nNesciunt vel officiis.\nAccusantium quo repudiandae.\nQuidem officiis sed quis voluptates cumque nostrum.\nIpsum dignissimos repellendus optio cum nam rerum alias.\nAt sed repellendus numquam cum dignissimos.\nLaboriosam alias cupiditate deleniti modi illum accusantium exercitationem./']`, but never found it.\n    at Context.eval (webpack:///./cypress/support/commands.js:169:48)",
-                "diff": null
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'\n    at Context.eval (webpack:///./cypress/support/commands.js:70:13)",
+                "diff": "- 'http://localhost:3001/ghost/#/signin'\n+ 'http://localhost:3001/ghost/#/site'\n"
               },
-              "uuid": "e69fef83-5184-4af0-931e-99d0db11a86f",
-              "parentUUID": "e9b1227a-a9ff-42b3-ba51-9bd2cb976d17",
+              "uuid": "55b765c2-1a6d-4652-b508-c6b9441257f7",
+              "parentUUID": "2f981688-cca2-4777-acdb-3560edc0e065",
               "isHook": false,
               "skipped": false
             }
@@ -310,17 +318,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "e69fef83-5184-4af0-931e-99d0db11a86f"
+            "55b765c2-1a6d-4652-b508-c6b9441257f7"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 29989,
+          "duration": 11798,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "98e99097-3b73-42bc-859d-1e81ba72de35",
+          "uuid": "8951775d-27f2-41d9-bc2c-9aa53a4ec5ac",
           "title": "F2-A-E8",
           "fullFile": "",
           "file": "",
@@ -331,7 +339,7 @@
               "title": "Crear Tag",
               "fullTitle": "F2-A-E8 Crear Tag",
               "timedOut": null,
-              "duration": 15656,
+              "duration": 11586,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -340,12 +348,12 @@
               "context": null,
               "code": "cy.crearTag(name, slug, description, color);",
               "err": {
-                "message": "CypressError: `cy.type()` can only accept a string or number. You passed in: `undefined`\n\nhttps://on.cypress.io/type",
-                "estack": "CypressError: `cy.type()` can only accept a string or number. You passed in: `undefined`\n\nhttps://on.cypress.io/type\n    at Context.type (http://localhost:3001/__cypress/runner/cypress_runner.js:134332:76)\n    at wrapped (http://localhost:3001/__cypress/runner/cypress_runner.js:151182:19)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/support/commands.js:164:37)",
-                "diff": null
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'\n    at Context.eval (webpack:///./cypress/support/commands.js:70:13)",
+                "diff": "- 'http://localhost:3001/ghost/#/signin'\n+ 'http://localhost:3001/ghost/#/site'\n"
               },
-              "uuid": "9e99a1c6-485d-4f84-8246-8e020782ae92",
-              "parentUUID": "98e99097-3b73-42bc-859d-1e81ba72de35",
+              "uuid": "c6da9ad7-a8f1-425d-82dd-26f5ce368c4b",
+              "parentUUID": "8951775d-27f2-41d9-bc2c-9aa53a4ec5ac",
               "isHook": false,
               "skipped": false
             }
@@ -353,17 +361,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "9e99a1c6-485d-4f84-8246-8e020782ae92"
+            "c6da9ad7-a8f1-425d-82dd-26f5ce368c4b"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 15656,
+          "duration": 11586,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "47269767-5694-4248-a346-38fe597c7778",
+          "uuid": "5814d997-9aa5-47d1-a780-4d635a7724bf",
           "title": "F2-A-E9",
           "fullFile": "",
           "file": "",
@@ -374,7 +382,7 @@
               "title": "Crear Tag",
               "fullTitle": "F2-A-E9 Crear Tag",
               "timedOut": null,
-              "duration": 23534,
+              "duration": 11939,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -383,12 +391,12 @@
               "context": null,
               "code": "cy.crearTag(name, slug, description, color);",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `a[href='#/tags/https://active-swine.org/']`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `a[href='#/tags/https://active-swine.org/']`, but never found it.\n    at Context.eval (webpack:///./cypress/support/commands.js:169:48)",
-                "diff": null
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'\n    at Context.eval (webpack:///./cypress/support/commands.js:70:13)",
+                "diff": "- 'http://localhost:3001/ghost/#/signin'\n+ 'http://localhost:3001/ghost/#/site'\n"
               },
-              "uuid": "37e87057-eb5a-4697-bbf2-d8b97779c757",
-              "parentUUID": "47269767-5694-4248-a346-38fe597c7778",
+              "uuid": "9f4dfb34-12b4-448a-a6d9-11c0d33eeb58",
+              "parentUUID": "5814d997-9aa5-47d1-a780-4d635a7724bf",
               "isHook": false,
               "skipped": false
             }
@@ -396,17 +404,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "37e87057-eb5a-4697-bbf2-d8b97779c757"
+            "9f4dfb34-12b4-448a-a6d9-11c0d33eeb58"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 23534,
+          "duration": 11939,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "75d7f543-b411-41a5-9e70-2815bd00b3a0",
+          "uuid": "f3f0c51b-9dcb-4c38-8fef-4a379fd769dd",
           "title": "F2-A-E10",
           "fullFile": "",
           "file": "",
@@ -417,35 +425,39 @@
               "title": "Crear Tag",
               "fullTitle": "F2-A-E10 Crear Tag",
               "timedOut": null,
-              "duration": 19595,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "duration": 12039,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "cy.crearTag(name, slug, description, color);",
-              "err": {},
-              "uuid": "f81ef517-af14-4443-b6b5-99a70fa7f343",
-              "parentUUID": "75d7f543-b411-41a5-9e70-2815bd00b3a0",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'\n    at Context.eval (webpack:///./cypress/support/commands.js:70:13)",
+                "diff": "- 'http://localhost:3001/ghost/#/signin'\n+ 'http://localhost:3001/ghost/#/site'\n"
+              },
+              "uuid": "1cf90622-d9af-4ecf-bd60-89e5f865eb93",
+              "parentUUID": "f3f0c51b-9dcb-4c38-8fef-4a379fd769dd",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "f81ef517-af14-4443-b6b5-99a70fa7f343"
+          "passes": [],
+          "failures": [
+            "1cf90622-d9af-4ecf-bd60-89e5f865eb93"
           ],
-          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 19595,
+          "duration": 12039,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "94e7c279-ef31-4f65-9a93-deacc3c5de19",
+          "uuid": "79b7bedf-51d1-4cd5-84ff-e9fa67d573d8",
           "title": "F2-A-E11",
           "fullFile": "",
           "file": "",
@@ -456,7 +468,7 @@
               "title": "Crear Tag",
               "fullTitle": "F2-A-E11 Crear Tag",
               "timedOut": null,
-              "duration": 23495,
+              "duration": 12072,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -465,12 +477,12 @@
               "context": null,
               "code": "cy.crearTag(name, slug, description, color);",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `a[href='#/tags/unless/']`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `a[href='#/tags/unless/']`, but never found it.\n    at Context.eval (webpack:///./cypress/support/commands.js:169:48)",
-                "diff": null
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3001/ghost/#/signin' to equal 'http://localhost:3001/ghost/#/site'\n    at Context.eval (webpack:///./cypress/support/commands.js:70:13)",
+                "diff": "- 'http://localhost:3001/ghost/#/signin'\n+ 'http://localhost:3001/ghost/#/site'\n"
               },
-              "uuid": "edead084-c41e-4fd8-9f5a-08ff6c770558",
-              "parentUUID": "94e7c279-ef31-4f65-9a93-deacc3c5de19",
+              "uuid": "904e27a9-c2cf-48e3-befb-712ab9a52c73",
+              "parentUUID": "79b7bedf-51d1-4cd5-84ff-e9fa67d573d8",
               "isHook": false,
               "skipped": false
             }
@@ -478,11 +490,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "edead084-c41e-4fd8-9f5a-08ff6c770558"
+            "904e27a9-c2cf-48e3-befb-712ab9a52c73"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 23495,
+          "duration": 12072,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
