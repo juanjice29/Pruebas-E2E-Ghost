@@ -5,6 +5,7 @@
     "main": "cypress.config.js",
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
+      "solo:vrt":"cypress run --key dc43f22d-b04f-42da-8f1b-7b71de772fc3 --spec \"cypress/e2e/funcionalidad1/funcionalidad1.spec.cy.js,cypress/e2e/funcionalidad1/funcionalidad1-V4.spec.cy.js,cypress/e2e/funcionalidad2/funcionalidad2.spec.cy.js,cypress/e2e/funcionalidad2/funcionalidad2-V4.spec.cy.js,cypress/e2e/funcionalidad4/funcionalidad4.spec.cy.js,cypress/e2e/funcionalidad4/funcionalidad4V4.spec.cy.js\" && node cypress/resemble_report.js",
       "solo:f1":"cypress run --record --key dc43f22d-b04f-42da-8f1b-7b71de772fc3 --spec \"cypress/e2e/funcionalidad1/esc_apriori.spec.cy.js,cypress/e2e/funcionalidad1/esc_psudo_aleatorios.spec.cy.js,cypress/e2e/funcionalidad1/esc_aleatorios.spec.cy.js\"",
       "solo:f2":"cypress run --record --key dc43f22d-b04f-42da-8f1b-7b71de772fc3 --spec \"cypress/e2e/funcionalidad2/esc_apriori.spec.cy.js,cypress/e2e/funcionalidad2/esc_psudo_aleatorios.spec.cy.js,cypress/e2e/funcionalidad2/esc_aleatorios.spec.cy.js\"",
       "solo:f3":"cypress run --record --key dc43f22d-b04f-42da-8f1b-7b71de772fc3 --spec \"cypress/e2e/funcionalidad3/esc_apriori.spec.cy.js,cypress/e2e/funcionalidad3/esc_psudo_aleatorios.spec.cy.js,cypress/e2e/funcionalidad3/esc_aleatorios.spec.cy.js\"",
