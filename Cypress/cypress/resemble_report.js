@@ -15,13 +15,13 @@ async function executeTest(){
             "esc1":8,
             "esc2":10          
         },
-        "func4":{
+        /*"func4":{
             "esc1":8,
             "esc2":5,
             "esc3":7,
             "esc4":12,
             "esc5":13
-        },   
+        },   */
     }}
     if (!fs.existsSync(`./results/Resemble_${datetime}`)){
         fs.mkdirSync(`./results/Resemble_${datetime}`, { recursive: true });
@@ -31,8 +31,8 @@ async function executeTest(){
             for(let k=1;k<=ejecuciones.funcionalidades[i][j];k++){
 
                 const data = await compareImages(
-                    fs.readFileSync(`./screenshots/${i}/v-4/${j}/e${k}.png`),
-                    fs.readFileSync(`./screenshots/${i}/v-3.41.1/${j}/e${k}.png`),
+                    fs.readFileSync(`./screenshots/funcionalidad${i.split('').pop()}/funcionalidad${i.split('').pop()}-V4.spec.cy.js/${i}/v-4/${j}/e${k}.png`),
+                    fs.readFileSync(`./screenshots/funcionalidad${i.split('').pop()}/funcionalidad${i.split('').pop()}.spec.cy.js/${i}/v-3.41.1/${j}/e${k}.png`),
                     options
                 );
                 resultInfo[i][j][k] = {
@@ -93,11 +93,14 @@ function createReport(datetime, resInfo,funcionN,escN,navigationBar){
                 <div class="imgline">
                 <div class="imgcontainer">
                     <span class="imgname">Reference</span>
-                    <img class="img2" src="../../screenshots/${funcionN}/v-3.41.1/${escN}/e${i}.png" id="refImage" label="Reference">
+
+                   
+
+                    <img class="img2" src="../../screenshots/funcionalidad${funcionN.split('').pop()}/funcionalidad${funcionN.split('').pop()}.spec.cy.js/${funcionN}/v-3.41.1/${escN}/e${i}.png" id="refImage" label="Reference">
                 </div>
                 <div class="imgcontainer">
                     <span class="imgname">Test</span>
-                    <img class="img2" src="../../screenshots/${funcionN}/v-4/${escN}/e${i}.png" id="testImage" label="Test">
+                    <img class="img2" src="../../screenshots/funcionalidad${funcionN.split('').pop()}/funcionalidad${funcionN.split('').pop()}-V4.spec.cy.js//${funcionN}/v-4/${escN}/e${i}.png" id="testImage" label="Test">
                 </div>
                 </div>
                 <div class="imgline">

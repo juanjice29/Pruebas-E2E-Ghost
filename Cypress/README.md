@@ -12,8 +12,9 @@
 <h2>Pasos para correr los escenarios de pruebas:</h2>
 <ul>
 <li>Clonar el repositorio en su equipo local, git clone https://github.com/juanjice29/Pruebas-E2E-Ghost/tree/main</li>
-<li>Ejecutar <b>npm install</b>, esto instalara dos librerias necesarias para correr los escenarios ,que son faker y mochawesome.</li>
-<li>Se deben cambiar las variables globales para que funcionen correctamente las pruebas, en la ruta <b>/cypress/environment/credentials.js</b> existen 3 variables, <b>email : </b> remplazela por el email que tiene registrado localmente en ghost,<b>password : </b> remplazela por la contraseña de su cuenta local en ghost y finalmente 
+<li>Ingresar a la carpeta Cypress/, todos los comandos se ejecutaran desde esta carpeta.</li>
+<li>Ejecutar <b>npm install</b>, esto instalara dos librerias necesarias para correr los escenarios ,que son faker,mochawesome y cypress.En caso de no funcionar la instalacion de cypres ejecutar npm install -g cypress.</li>
+<li>Se deben cambiar las variables globales para que funcionen correctamente las pruebas, en la ruta <b>/cypress/environment/credentials.js</b> existen 3 variables, <b>email : </b> remplazela por el email que tiene registrado localmente en ghost,<b>password : </b> remplazela por la contraseña de su cuenta local(Es decir, primero debe crearse una cuenta) en ghost y finalmente 
 <b>baseUrl : </b> es necesario remplazar el puerto por el cual esta escuchando la aplicacion.</li>
 <li>Adicionalmente existen estas mismas tres variables para correr los escenarios de la Version 4.44.0 de ghost.</li>
 Aqui hay dos opciones para abrir cypress y ejecturar las pruebas:
