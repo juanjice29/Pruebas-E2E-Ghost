@@ -29,11 +29,13 @@ Aqui hay dos opciones para abrir cypress y ejecturar las pruebas:
 Para ejcutar las pruebas de resgresion con resemble.js es necesario ubicarse dentro de la carpeta <b>Cypress/cypress</b> y ejecutar el comando node <b>resemble_report.js</b> . Esto generara un reporte en la carpeta
 <b>./results/Resemble_${fecha y hora de ejecuccion}</b> , dentro de estos archivos se encuentran varios archivos <b> .html</b> , puede abrir cualquiera de ellos para visualizar los reportes, ya que dentro de cada archivo existe una barra de navegacion en la cual ordenamos las regresiones visuales de cada funcionalidad/escenario.
 
-Para el reporte final se debe utilizar el comando `npm run solo:vrt`
+
 
 ![image](https://github.com/juanjice29/Pruebas-E2E-Ghost/assets/123905839/a76e7f66-92b6-48e8-b262-9a12ddbcff3f)
 
 Cada archivo html contiene los diferentes screenshots que se tomaron en cada escenario.
+
+Para el resultado final o si desea ejecutar todos los escenarios utilice el comando `npm run solo:vrt`
 
 <h2>Instrucciones para correr pruebas con pool de datos aleatorios, pseudo aleatorios y a priori</h2>
 <p>En la carpeta e2e dentro de cypress, se distribuyen las pruebas de las 5 funcionalidades probadas</p>
